@@ -2,7 +2,7 @@ name: Daily Data Fetch
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # 6 AM IST
+    - cron: '0 6,18 * * *'
 
 jobs:
   build:
