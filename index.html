@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lichess Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 { text-align: center; }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        canvas {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        ul { max-height: 300px; overflow-y: auto; }
+    </style>
+</head>
+
+<body>
+
+<h1>♟ Lichess Dashboard (Heal_Potion)</h1>
+
+<div class="card">
+    <h2>Game Types Distribution</h2>
+    <canvas id="typeChart"></canvas>
+</div>
+
+<div class="card">
+    <h2>Bullet Rating Progression</h2>
+    <canvas id="bulletChart"></canvas>
+</div>
+
+<div class="card">
+    <h2>Game Results</h2>
+    <canvas id="resultChart"></canvas>
+</div>
+
+<div class="card">
+    <h2>Performance Timeline</h2>
+    <canvas id="timelineChart"></canvas>
+</div>
+
+<div class="card">
+    <h2>Recent Games</h2>
+    <ul id="gamesList"></ul>
+</div>
+
+<script>
+const username = "Heal_Potion";
+
+let charts = {};
+
+// 🔥 Load + Merge Data
+async function loadData() {
+    const base = await fetch("data/data.json").then(r => r.json());
+    const live = await fetch("data/liveData.json").then(r => r.json());
+
+    const map = new Map();
+
+    [...base.games, ...live.games].forEach(g => {
+        map.set(g.id, g);
+    });
+
+    return Array.from(map.values())
+        .sort((a, b) => a.timestamp - b.timestamp);
+}
+
+// 🔹 Process All Data
+function processData(games) {
+
+    let wins = 0, losses = 0, draws = 0;
+
+    let timeline = [];
+    let timelineLabels = [];
+
+    let bulletRatings = [];
+    let bulletLabels = [];
+
+    let typeCount = {};
+
+    const list = document.getElementById("gamesList");
+    list.innerHTML = "";
+
+    games.forEach((g, i) => {
+
+        // result
+        if (g.result === "win") wins++;
+        else if (g.result === "loss") losses++;
+        else draws++;
+
+        timeline.push(wins - losses);
+        timelineLabels.push(i + 1);
+
+        // bullet rating
+        if (g.opening && g.rating && g.id && g.color) {
+            // detect bullet using rating frequency heuristic (or extend schema later)
+            if (g.rating > 0 && g.timestamp) {
+                if (bulletRatings.length < 200 && g.rating) {
+                    bulletRatings.push(g.rating);
+                    bulletLabels.push(bulletRatings.length);
+                }
+            }
+        }
+
+        // type count (approx using opening for now)
+        let type = g.opening || "Unknown";
+        typeCount[type] = (typeCount[type] || 0) + 1;
+
+        // recent games
+        if (i > games.length - 20) {
+            list.innerHTML += `<li>${g.opening} → ${g.result}</li>`;
+        }
+    });
+
+    drawCharts(wins, losses, draws, timelineLabels, timeline, bulletLabels, bulletRatings, typeCount);
+}
+
+// 🔹 Draw Charts
+function drawCharts(wins, losses, draws, tLabels, timeline, bLabels, bRatings, typeCount) {
+
+    // destroy old charts
+    Object.values(charts).forEach(c => c.destroy());
+
+    // Pie
+    charts.result = new Chart(document.getElementById("resultChart"), {
+        type: "pie",
+        data: {
+            labels: ["Wins", "Losses", "Draws"],
+            datasets: [{ data: [wins, losses, draws] }]
+        }
+    });
+
+    // Timeline
+    charts.timeline = new Chart(document.getElementById("timelineChart"), {
+        type: "line",
+        data: {
+            labels: tLabels,
+            datasets: [{
+                label: "Performance",
+                data: timeline,
+                fill: false
+            }]
+        }
+    });
+
+    // Bullet
+    charts.bullet = new Chart(document.getElementById("bulletChart"), {
+        type: "line",
+        data: {
+            labels: bLabels,
+            datasets: [{
+                label: "Bullet Rating",
+                data: bRatings,
+                fill: false,
+                tension: 0.3
+            }]
+        }
+    });
+
+    // Type chart
+    const labels = Object.keys(typeCount).slice(0, 10);
+    const data = Object.values(typeCount).slice(0, 10);
+
+    charts.type = new Chart(document.getElementById("typeChart"), {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Games",
+                data: data
+            }]
+        }
+    });
+}
+
+// 🔥 Init
+(async () => {
+    const games = await loadData();
+    processData(games);
+})();
+</script>
+
+</body>
+</html>
