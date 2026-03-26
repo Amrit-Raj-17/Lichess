@@ -1,12 +1,26 @@
 const fs = require("fs");
 
 const USERNAME = "Heal_Potion";
+const DATA_PATH = "data/data.json";
+const LIVE_PATH = "data/liveData.json";
 
 async function fetchRecentGames() {
-    const existing = JSON.parse(fs.readFileSync("data/data.json", "utf-8"));
-    const lastUpdated = existing.lastUpdated;
+    // 🔹 Load existing full data
+    let existing = { games: [] };
 
-    const url = `https://lichess.org/api/games/user/${USERNAME}?since=${lastUpdated}&max=300`;
+    if (fs.existsSync(DATA_PATH)) {
+        existing = JSON.parse(fs.readFileSync(DATA_PATH, "utf-8"));
+    }
+
+    // 🔥 Get LAST GAME timestamp (NOT lastUpdated)
+    const lastGameTimestamp = existing.games.length > 0
+        ? Math.max(...existing.games.map(g => g.timestamp))
+        : 0;
+
+    console.log("Last game timestamp:", lastGameTimestamp);
+
+    // 🔹 Fetch new games
+    const url = `https://lichess.org/api/games/user/${USERNAME}?since=${lastGameTimestamp}&max=300`;
 
     const res = await fetch(url, {
         headers: {
@@ -16,6 +30,11 @@ async function fetchRecentGames() {
 
     const text = await res.text();
     const lines = text.split("\n").filter(l => l.trim());
+
+    if (lines.length === 0) {
+        console.log("No new games found.");
+        return; // ✅ DON'T overwrite existing file
+    }
 
     let newGames = [];
 
@@ -57,15 +76,33 @@ async function fetchRecentGames() {
         });
     }
 
+    // 🔹 Load existing live data (if exists)
+    let liveData = { games: [] };
+
+    if (fs.existsSync(LIVE_PATH)) {
+        liveData = JSON.parse(fs.readFileSync(LIVE_PATH, "utf-8"));
+    }
+
+    // 🔥 Merge + Deduplicate
+    const map = new Map();
+
+    [...liveData.games, ...newGames].forEach(g => {
+        map.set(g.id, g);
+    });
+
+    const mergedGames = Array.from(map.values())
+        .sort((a, b) => a.timestamp - b.timestamp);
+
+    // 🔹 Save updated live data
     fs.writeFileSync(
-        "data/liveData.json",
+        LIVE_PATH,
         JSON.stringify({
             lastUpdated: Date.now(),
-            games: newGames
+            games: mergedGames
         }, null, 2)
     );
 
-    console.log(`New games: ${newGames.length}`);
+    console.log(`Added ${newGames.length} new games. Total live: ${mergedGames.length}`);
 }
 
 fetchRecentGames();
