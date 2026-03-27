@@ -13,7 +13,7 @@ async function fetchRecentGames() {
     }
 
     // 🔥 Get LAST GAME timestamp (NOT lastUpdated)
-    const lastGameTimestamp = existing.games.length > 0
+    const lastGameTimestamp = existing?.games?.length > 0
         ? Math.max(...existing.games.map(g => g.timestamp))
         : 0;
 
