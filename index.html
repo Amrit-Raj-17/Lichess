@@ -1,199 +1,423 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
     <title>Lichess Dashboard</title>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+
+    <script src="data/data.js"></script>
 
     <style>
         body {
-            font-family: Arial;
-            background: #0f172a;
-            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .container {
             padding: 20px;
         }
 
-        h1 { text-align: center; }
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            background: #a8a8a8;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .small {
+            color: #000000;
         }
 
         canvas {
-            background: white;
-            border-radius: 10px;
+            background: #dadada;
+            border-radius: 8px;
             padding: 10px;
         }
 
-        ul { max-height: 300px; overflow-y: auto; }
+        .recent {
+            display: flex;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+
+        .win {
+            background: #22c55e;
+        }
+
+        .loss {
+            background: #ef4444;
+        }
+
+        .draw {
+            background: #eab308;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 6px;
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .card {
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 
 <body>
 
-<h1>♟ Lichess Dashboard (Heal_Potion)</h1>
+    <div class="container">
 
-<div class="card">
-    <h2>Game Types Distribution</h2>
-    <canvas id="typeChart"></canvas>
-</div>
+        <!-- PLAYER OVERVIEW -->
+        <div class="grid grid-4" id="overview"></div>
 
-<div class="card">
-    <h2>Bullet Rating Progression</h2>
-    <canvas id="bulletChart"></canvas>
-</div>
+        <!-- RATING GRAPH -->
+        <div class="card">
+            <h2>Rating Progress</h2>
+            <div id="ratingChart" style="height: 400px;"></div>
+        </div>
 
-<div class="card">
-    <h2>Game Results</h2>
-    <canvas id="resultChart"></canvas>
-</div>
+        <!-- VARIANT + COLOR -->
+        <div class="grid grid-2">
 
-<div class="card">
-    <h2>Performance Timeline</h2>
-    <canvas id="timelineChart"></canvas>
-</div>
+            <div class="card">
+                <h2>Performance by Variant</h2>
+                <div id="variantStats"></div>
+            </div>
 
-<div class="card">
-    <h2>Recent Games</h2>
-    <ul id="gamesList"></ul>
-</div>
+            <div class="card">
+                <h2>Win Rate by Color</h2>
+                <canvas id="colorChart"></canvas>
+            </div>
 
-<script>
-const username = "Heal_Potion";
+        </div>
 
-let charts = {};
+        <!-- RECENT + STREAK -->
+        <div class="grid grid-2">
 
-// 🔥 Load + Merge Data
-async function loadData() {
-    const base = await fetch("data/data.json").then(r => r.json());
-    const live = await fetch("data/liveData.json").then(r => r.json());
+            <div class="card">
+                <h2>Recent Form</h2>
+                <div class="recent" id="recentForm"></div>
+            </div>
 
-    const map = new Map();
+            <div class="card">
+                <h2>Streaks</h2>
+                <div id="streaks"></div>
+            </div>
 
-    [...base.games, ...live.games].forEach(g => {
-        map.set(g.id, g);
-    });
+        </div>
 
-    return Array.from(map.values())
-        .sort((a, b) => a.timestamp - b.timestamp);
-}
+        <!-- HEATMAP + RESULT -->
+        <div class="grid grid-2">
 
-// 🔹 Process All Data
-function processData(games) {
+            <div class="card">
+                <h2>Activity Heatmap</h2>
+                <table id="heatmap"></table>
+            </div>
 
-    let wins = 0, losses = 0, draws = 0;
+            <div class="card">
+                <h2>Result Distribution</h2>
+                <canvas style="height: 310px; width: 310px;" id="resultChart"></canvas>
+            </div>
 
-    let timeline = [];
-    let timelineLabels = [];
+        </div>
 
-    let bulletRatings = [];
-    let bulletLabels = [];
+    </div>
 
-    let typeCount = {};
+    <script>
 
-    const list = document.getElementById("gamesList");
-    list.innerHTML = "";
+        const allGames = [];
+        const recentGames = [];
+        const gamesByVariant = {};
 
-    games.forEach((g, i) => {
+        function loadData(base) {
+            const games = base.games.sort((a, b) => a.timestamp - b.timestamp);
+            allGames.push(...games);
+            recentGames.push(...games.slice(-25));
+        }
 
-        // result
-        if (g.result === "win") wins++;
-        else if (g.result === "loss") losses++;
-        else draws++;
+        function prepareData() {
+            allGames.forEach(g => {
+                if (!gamesByVariant[g.variant]) gamesByVariant[g.variant] = [];
+                gamesByVariant[g.variant].push(g);
+            });
+        }
 
-        timeline.push(wins - losses);
-        timelineLabels.push(i + 1);
+        function buildOverview() {
+            const total = allGames.length;
+            const wins = allGames.filter(g => g.result === "win").length;
+            const losses = allGames.filter(g => g.result === "loss").length;
+            const draws = allGames.filter(g => g.result === "draw").length;
 
-        // bullet rating
-        if (g.opening && g.rating && g.id && g.color) {
-            // detect bullet using rating frequency heuristic (or extend schema later)
-            if (g.rating > 0 && g.timestamp) {
-                if (bulletRatings.length < 200 && g.rating) {
-                    bulletRatings.push(g.rating);
-                    bulletLabels.push(bulletRatings.length);
+            const winRate = ((wins / total) * 100).toFixed(1);
+
+            const div = document.getElementById("overview");
+
+            div.innerHTML = `
+                <div class="card"><div class="stat">${total}</div><div class="small">Games</div></div>
+                <div class="card"><div class="stat">${winRate}%</div><div class="small">Win Rate</div></div>
+                <div class="card"><div class="stat">${wins}</div><div class="small">Wins</div></div>
+                <div class="card"><div class="stat">${losses}</div><div class="small">Losses</div></div>
+            `;
+        }
+
+        function buildRatingChart() {
+            const datasetsMap = {};
+
+            allGames.forEach(g => {
+                if (!datasetsMap[g.variant]) datasetsMap[g.variant] = [];
+                datasetsMap[g.variant].push({
+                    x: g.timestamp,
+                    y: g.rating
+                });
+            });
+
+            const variantColors = {
+                bullet: "#22c55e",
+                blitz: "#3b82f6",
+                rapid: "#f59e0b",
+                classical: "#ef4444",
+                correspondence: "#59fda6",
+                ultraBullet: "#9e9e9e",
+            };
+
+            const datasets = Object.keys(datasetsMap).map(variant => ({
+                label: variant.charAt(0).toUpperCase() + variant.slice(1),
+                data: datasetsMap[variant].sort((a, b) => a.x - b.x),
+                borderColor: variantColors[variant] || "#888888",
+                backgroundColor: "transparent",
+                pointRadius: 3,
+                pointHoverRadius: 6,
+                borderWidth: 2,
+                tension: 0,
+            }));
+            
+            const container = document.getElementById("ratingChart");
+            container.innerHTML = '<canvas id="ratingCanvas"></canvas>';
+
+            new Chart(document.getElementById("ratingCanvas"), {
+                type: "line",
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: "nearest",
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: { position: "top" },
+                        zoom: {
+                            zoom: {
+                                wheel: { enabled: true },
+                                pinch: { enabled: true },
+                                mode: "x"
+                            },
+                            pan: {
+                                enabled: true,
+                                mode: "x"
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: ctx => new Date(ctx[0].parsed.x).toLocaleDateString(),
+                                label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: "time",
+                            time: {
+                                unit: "month",
+                                displayFormats: { month: "MMM yyyy" }
+                            },
+                            title: { display: true, text: "Date" }
+                        },
+                        y: {
+                            title: { display: true, text: "Rating" }
+                        }
+                    }
                 }
+            });
+        }
+
+        function buildVariantStats() {
+            const div = document.getElementById("variantStats");
+
+            let html = "";
+
+            for (let v in gamesByVariant) {
+                const games = gamesByVariant[v];
+                const wins = games.filter(g => g.result === "win").length;
+                const wr = ((wins / games.length) * 100).toFixed(1);
+
+                html += `<p>${v}: ${games.length} games | ${wr}% WR</p>`;
             }
+
+            div.innerHTML = html;
         }
 
-        // type count (approx using opening for now)
-        let type = g.opening || "Unknown";
-        typeCount[type] = (typeCount[type] || 0) + 1;
+        function buildRecentForm() {
+            const div = document.getElementById("recentForm");
 
-        // recent games
-        if (i > games.length - 20) {
-            list.innerHTML += `<li>${g.opening} → ${g.result}</li>`;
+            recentGames.forEach(g => {
+                const d = document.createElement("div");
+                d.classList.add("dot", g.result);
+                div.appendChild(d);
+            });
         }
-    });
 
-    drawCharts(wins, losses, draws, timelineLabels, timeline, bulletLabels, bulletRatings, typeCount);
-}
+        function buildColorChart() {
+            const white = allGames.filter(g => g.color === "white");
+            const black = allGames.filter(g => g.color === "black");
 
-// 🔹 Draw Charts
-function drawCharts(wins, losses, draws, tLabels, timeline, bLabels, bRatings, typeCount) {
+            const wWin = white.filter(g => g.result === "win").length;
+            const bWin = black.filter(g => g.result === "win").length;
 
-    // destroy old charts
-    Object.values(charts).forEach(c => c.destroy());
-
-    // Pie
-    charts.result = new Chart(document.getElementById("resultChart"), {
-        type: "pie",
-        data: {
-            labels: ["Wins", "Losses", "Draws"],
-            datasets: [{ data: [wins, losses, draws] }]
+            new Chart(document.getElementById("colorChart"), {
+                type: "bar",
+                data: {
+                    labels: ["White", "Black"],
+                    datasets: [{
+                        label: "Wins",
+                        data: [wWin, bWin]
+                    }]
+                }
+            });
         }
-    });
 
-    // Timeline
-    charts.timeline = new Chart(document.getElementById("timelineChart"), {
-        type: "line",
-        data: {
-            labels: tLabels,
-            datasets: [{
-                label: "Performance",
-                data: timeline,
-                fill: false
-            }]
+        function buildStreaks() {
+            let maxWin = 0, maxLoss = 0, cur = 0;
+
+            allGames.forEach(g => {
+                if (g.result === "win") {
+                    cur = cur > 0 ? cur + 1 : 1;
+                    maxWin = Math.max(maxWin, cur);
+                } else if (g.result === "loss") {
+                    cur = cur < 0 ? cur - 1 : -1;
+                    maxLoss = Math.min(maxLoss, cur);
+                }
+            });
+
+            document.getElementById("streaks").innerHTML = `
+        <p>Max Win Streak: ${maxWin}</p>
+        <p>Max Loss Streak: ${Math.abs(maxLoss)}</p>
+    `;
         }
-    });
 
-    // Bullet
-    charts.bullet = new Chart(document.getElementById("bulletChart"), {
-        type: "line",
-        data: {
-            labels: bLabels,
-            datasets: [{
-                label: "Bullet Rating",
-                data: bRatings,
-                fill: false,
-                tension: 0.3
-            }]
+        function buildHeatmap() {
+            const map = {};
+
+            allGames.forEach(g => {
+                const d = new Date(g.timestamp);
+                const day = d.getDay();
+                const hour = d.getHours();
+
+                if (!map[day]) map[day] = {};
+                if (!map[day][hour]) map[day][hour] = 0;
+
+                map[day][hour]++;
+            });
+
+            const table = document.getElementById("heatmap");
+
+            let html = "";
+
+            for (let d = 0; d < 7; d++) {
+                html += "<tr>";
+                for (let h = 0; h < 24; h++) {
+                    const val = (map[d] && map[d][h]) || 0;
+                    html += `<td>${val}</td>`;
+                }
+                html += "</tr>";
+            }
+
+            table.innerHTML = html;
         }
-    });
 
-    // Type chart
-    const labels = Object.keys(typeCount).slice(0, 10);
-    const data = Object.values(typeCount).slice(0, 10);
+        function buildResultChart() {
+            const wins = allGames.filter(g => g.result === "win").length;
+            const losses = allGames.filter(g => g.result === "loss").length;
+            const draws = allGames.filter(g => g.result === "draw").length;
 
-    charts.type = new Chart(document.getElementById("typeChart"), {
-        type: "bar",
-        data: {
-            labels: labels,
-            datasets: [{
-                label: "Games",
-                data: data
-            }]
+            new Chart(document.getElementById("resultChart"), {
+                type: "pie",
+                data: {
+                    labels: ["Wins", "Losses", "Draws"],
+                    datasets: [{
+                        data: [wins, losses, draws]
+                    }]
+                }
+            });
         }
-    });
-}
 
-// 🔥 Init
-(async () => {
-    const games = await loadData();
-    processData(games);
-})();
-</script>
+        (function init() {
+            loadData(data);
+            prepareData();
+
+            buildOverview();
+            buildRatingChart();
+            buildVariantStats();
+            buildRecentForm();
+            buildColorChart();
+            buildStreaks();
+            buildHeatmap();
+            buildResultChart();
+        })();
+
+    </script>
 
 </body>
+
 </html>
