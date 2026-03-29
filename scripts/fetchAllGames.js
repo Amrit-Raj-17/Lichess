@@ -2,6 +2,18 @@ const fs = require("fs");
 
 const USERNAME = "Heal_Potion";
 
+async function fetchProfileInfo() {
+    const url = `https://lichess.org/api/user/${USERNAME}`;
+
+    const res = await fetch(url, {
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+
+    return await res.json();
+}
+
 async function fetchAllGames() {
     let allGames = [];
     const url = `https://lichess.org/api/games/user/${USERNAME}`;
@@ -46,25 +58,54 @@ async function fetchAllGames() {
             else result = "loss";
         }
 
+        let clock = "correspondence";
+        if (g.clock) {
+            const mins = g.clock.initial / 60;
+            const inc = g.clock.increment;
+            const minsStr = Number.isInteger(mins) ? mins : mins.toFixed(1);
+            clock = `${minsStr}+${inc}`;
+        } else if (g.speed === "correspondence" && g.daysPerTurn) {
+            clock = `${g.daysPerTurn}d/move`;
+        }
+
         allGames.push({
             id: g.id,
             rating: player.rating,
             result,
+            rated: g.rated,
             color,
+            moves: g.moves,
             timestamp: g.createdAt,
-            opponent: opponent?.user?.name || 'Unknown',
-            variant: g.speed,
+            oppN: opponent?.user?.name || 'Unknown',
+            oppR: opponent?.rating || 'Unknown',
+            type: g.perf,
+            clock,
         });
     }
 
     console.log(`Fetched: ${allGames.length}`);
-
-    const data = {
-        lastUpdated: Date.now(),
-        games: allGames
-    };
-
-    fs.writeFileSync("data/data.js", "const data = " + JSON.stringify(data, null, 2) + ";");
+    return allGames;
 }
 
-fetchAllGames();
+async function main() {
+    const [profile, games] = await Promise.all([
+        fetchProfileInfo(),
+        fetchAllGames()
+    ]);
+
+    const output = `
+        const profile = ${JSON.stringify({
+                lastUpdated: Date.now(),
+                profile
+            }, null, 2)};
+
+        const data = ${JSON.stringify({
+                lastUpdated: Date.now(),
+                games
+            }, null, 2)};
+    `;
+
+    fs.writeFileSync("data/data.js", output);
+}
+
+main();
