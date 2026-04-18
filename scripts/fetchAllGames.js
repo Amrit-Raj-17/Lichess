@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const USERNAMES = ["Heal_Potion", "blitz_slayer", "power_factor", "satrit"];
+const USERNAMES = ["Heal_Potion", "blitz_slayer", "power_factor", "satrit", "penguin_d4c4"];
 
 async function fetchProfileInfo(USERNAME) {
     const url = `https://lichess.org/api/user/${USERNAME}`;
