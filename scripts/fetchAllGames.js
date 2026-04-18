@@ -16,7 +16,7 @@ async function fetchProfileInfo(USERNAME) {
 
 async function fetchAllGames(USERNAME) {
     let allGames = [];
-    const url = `https://lichess.org/api/games/user/${USERNAME}?max=100`;
+    const url = `https://lichess.org/api/games/user/${USERNAME}`;
 
     const res = await fetch(url, {
         headers: {
