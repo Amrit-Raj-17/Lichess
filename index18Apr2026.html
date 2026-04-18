@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lichess Dashboard</title>
+
+    <script src="data/data.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0d0f14;
+            --bg2: #13161e;
+            --bg3: #1a1e29;
+            --exp: #0c0e16;
+            --border: #252a38;
+            --text: #e8ecf4;
+            --text2: #7a8099;
+            --text3: #4a5068;
+            --accent: #a8ff78;
+            --accent2: #78ffd6;
+            --win: #4ade80;
+            --loss: #f87171;
+            --draw: #94a3b8;
+            --card: #161b27;
+            --card-hover: #1e2436;
+            --shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+            --radius: 10px;
+            --chart-grid: rgba(255, 255, 255, 0.04);
+            --tooltip-bg: #1a1e2e;
+        }
+
+        [data-theme="light"] {
+            --bg: #f0f2f7;
+            --bg2: #e4e7ef;
+            --bg3: #d8dce8;
+            --exp: #bec4dd;
+            --border: #c8cdde;
+            --text: #0f1117;
+            --text2: #4a5068;
+            --text3: #8a90a8;
+            --accent: #16803c;
+            --accent2: #0891b2;
+            --win: #16803c;
+            --loss: #dc2626;
+            --draw: #64748b;
+            --card: #ffffff;
+            --card-hover: #f5f7ff;
+            --shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
+            --chart-grid: rgba(0, 0, 0, 0.06);
+            --tooltip-bg: #ffffff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .app {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 20px 80px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            color: var(--text);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .last-updated {
+            font-size: 11px;
+            color: var(--text3);
+            margin-top: 2px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+            color: var(--text2);
+        }
+
+        .theme-toggle:hover {
+            background: var(--border);
+        }
+
+        .profile-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg3);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .profile-name {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .profile-name a {
+            color: var(--text);
+        }
+
+        .profile-meta {
+            font-size: 11px;
+            color: var(--text3);
+            margin-top: 2px;
+        }
+
+        .profile-divider {
+            width: 1px;
+            height: 36px;
+            background: var(--border);
+            flex-shrink: 0;
+        }
+
+        .profile-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .profile-stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text3);
+        }
+
+        .profile-stat-value {
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .profile-stat-value.win {
+            color: var(--win);
+        }
+
+        .profile-stat-value.loss {
+            color: var(--loss);
+        }
+
+        .profile-stat-value.draw {
+            color: var(--draw);
+        }
+
+        .variant-selector {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .variant-btn {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.18s;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .variant-btn:hover {
+            background: var(--card-hover);
+            color: var(--text);
+            border-color: var(--text3);
+        }
+
+        .variant-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            font-weight: 500;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: background 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .stat-card.wins::before {
+            background: var(--win);
+        }
+
+        .stat-card.loss::before {
+            background: var(--loss);
+        }
+
+        .stat-card.draw::before {
+            background: var(--draw);
+        }
+
+        .stat-card.rate::before {
+            background: var(--accent2);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text3);
+        }
+
+        .stat-value {
+            font-family: 'Syne', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .stat-badge {
+            font-size: 11px;
+            font-weight: 500;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 2px;
+            width: fit-content;
+        }
+
+        .stat-badge.pos {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--win);
+        }
+
+        .stat-badge.neg {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--loss);
+        }
+
+        .stat-badge.neu {
+            background: rgba(148, 163, 184, 0.15);
+            color: var(--draw);
+        }
+
+        .chart-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text3);
+        }
+
+        .agg-toggle {
+            display: flex;
+            gap: 4px;
+        }
+
+        .agg-btn {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            color: var(--text3);
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.15s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .agg-btn:hover {
+            color: var(--text2);
+            border-color: var(--text3);
+        }
+
+        .agg-btn.active {
+            background: var(--bg3);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .chart-wrap {
+            position: relative;
+            height: 260px;
+        }
+
+        .chart-tooltip {
+            position: fixed;
+            background: var(--tooltip-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 14px;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 12px;
+            box-shadow: var(--shadow);
+            min-width: 180px;
+            display: none;
+        }
+
+        .chart-tooltip.visible {
+            display: block;
+        }
+
+        .ct-rating {
+            font-family: 'Syne', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .ct-sub {
+            color: var(--text2);
+            font-size: 11px;
+        }
+
+        .ct-result-win {
+            color: var(--win);
+        }
+
+        .ct-result-loss {
+            color: var(--loss);
+        }
+
+        .ct-result-draw {
+            color: var(--draw);
+        }
+
+        .form-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-strip {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .form-sq {
+            width: 28px;
+            height: 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.15s, opacity 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .form-sq:hover {
+            transform: scale(1.25);
+            opacity: 0.85;
+        }
+
+        .form-sq.win {
+            background: var(--win);
+        }
+
+        .form-sq.loss {
+            background: var(--loss);
+        }
+
+        .form-sq.draw {
+            background: var(--draw);
+        }
+
+        .table-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        thead th {
+            background: var(--bg3);
+            color: var(--text2);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.15s;
+            cursor: pointer;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: var(--card-hover);
+        }
+
+        tbody tr.expanded {
+            background: var(--exp);
+        }
+
+        tbody td {
+            padding: 9px 14px;
+            color: var(--text2);
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        tbody td.result-win {
+            color: var(--win);
+            font-weight: 500;
+        }
+
+        tbody td.result-loss {
+            color: var(--loss);
+            font-weight: 500;
+        }
+
+        tbody td.result-draw {
+            color: var(--draw);
+            font-weight: 500;
+        }
+
+        .my-rating {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .color-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .color-dot.white {
+            background: #e8e8e8;
+            border: 1px solid #aaa;
+        }
+
+        .color-dot.black {
+            background: #333;
+            border: 1px solid #777;
+        }
+
+        .moves-row td {
+            padding: 0 !important;
+        }
+
+        .moves-expander {
+            padding: 14px 20px;
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+        }
+
+        .moves-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .moves-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .moves-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            flex: 1;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .move-token {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11.5px;
+            color: var(--text2);
+            transition: background 0.12s, color 0.12s;
+            white-space: nowrap;
+        }
+
+        .move-token:hover,
+        .move-token.active {
+            background: var(--border);
+            color: var(--text);
+        }
+
+        .move-token.active {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .move-token .move-num {
+            color: var(--text3);
+            font-size: 10px;
+            margin-right: 1px;
+        }
+
+        .board-panel {
+            width: 214px;
+            flex-shrink: 0;
+        }
+
+        .board-info {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--text3);
+            text-align: center;
+        }
+
+        .uni-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            width: 200px;
+            height: 200px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+
+        .uni-board .sq {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            line-height: 1;
+            cursor: default;
+            user-select: none;
+        }
+
+        .uni-board .sq.light {
+            background: #f0d9b5;
+        }
+
+        .uni-board .sq.dark {
+            background: #b58863;
+        }
+
+        .uni-board .sq.hl-light {
+            background: #cdd26a;
+        }
+
+        .uni-board .sq.hl-dark {
+            background: #aaa23a;
+        }
+
+        .uni-board .sq .wp {
+            color: #fff;
+            text-shadow: 0 0 1px #333, 0 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .uni-board .sq .bp {
+            color: #1a1a1a;
+            text-shadow: 0 0 1px #fff4, 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .board-coords {
+            display: grid;
+            grid-template-columns: 14px 200px;
+            grid-template-rows: 200px 14px;
+            gap: 0;
+            margin-bottom: 6px;
+        }
+
+        .board-ranks {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 9px;
+            color: var(--text3);
+            padding-right: 2px;
+        }
+
+        .board-files {
+            grid-column: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 9px;
+            color: var(--text3);
+            padding-top: 2px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 700px) {
+            .stats-bar {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .board-panel {
+                display: none;
+            }
+
+            .profile-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <label for="userName">Select User: 
+        <select name="username" id="userName">
+            <option value="Heal_Potion">Heal Potion</option>
+            <option value="blitz_slayer">Blitz Slayer</option>
+            <option value="power_factor">Power Factor</option>
+            <option value="satrit">Satrit</option>
+        </select>
+    </label>
+    <div class="app">
+
+        <header class="header">
+            <div class="header-left">
+                <div>
+                    <div class="logo">♟ lichess<span>.</span>dash</div>
+                    <div class="last-updated" id="lastUpdated">—</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="variant-selector" id="variantSelector"></div>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀</button>
+            </div>
+        </header>
+
+        <!-- Profile card -->
+        <div class="profile-card" id="profileCard"></div>
+
+        <div class="stats-bar" id="statsBar"></div>
+
+        <div class="chart-section">
+            <div class="chart-header">
+                <div class="section-title">Rating Over Time</div>
+                <div class="agg-toggle" id="aggToggle">
+                    <button class="agg-btn active" data-agg="game">Per Game</button>
+                    <button class="agg-btn" data-agg="day">Daily</button>
+                    <button class="agg-btn" data-agg="week">Weekly</button>
+                    <button class="agg-btn" data-agg="month">Monthly</button>
+                </div>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="ratingChart"></canvas>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-title">Recent Form — last 30 games</div>
+            <div class="form-strip" id="formStrip"></div>
+        </div>
+
+        <div class="table-section">
+            <div class="section-title" style="padding:18px 20px 0;">Game Log</div>
+            <div class="table-scroll">
+                <table id="gamesTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Game</th>
+                            <th>Rated</th>
+                            <th>Color</th>
+                            <th>My Rating</th>
+                            <th>Opponent</th>
+                            <th>Opp. Rating</th>
+                            <th>Result</th>
+                            <th>Clock</th>
+                            <th>Moves</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gamesBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="chart-tooltip" id="chartTooltip"></div>
+
+    <script>
+        var activeUser = document.getElementById('userName').value;
+        document.getElementById('userName').addEventListener('change', e => {
+            activeUser = e.target.value;
+            initial();
+        })
+        function initial() {
+
+            const VARIANTS = [
+                'antichess', 'blitz', 'bullet', 'ultraBullet', 'classical', 'rapid',
+                'correspondence', 'chess960', 'atomic', 'racingKings', 'crazyhouse',
+                'kingOfTheHill', 'threeCheck', 'horde'
+            ];
+            const VARIANT_LABELS = {
+                antichess: 'Antichess', blitz: 'Blitz', bullet: 'Bullet',
+                ultraBullet: 'Ultra Bullet', classical: 'Classical', rapid: 'Rapid',
+                correspondence: 'Correspondence', chess960: 'Chess 960', atomic: 'Atomic',
+                racingKings: 'Racing Kings', crazyhouse: 'Crazyhouse',
+                kingOfTheHill: 'King Of The Hill', threeCheck: 'Three Check', horde: 'Horde'
+            };
+
+            const PER_GAME_CROWDED = 100;
+
+            const dataByType = {};
+            let currentVariant = 'bullet';
+            let currentAgg = 'game';
+            let ratingChart = null;
+            let expandedRow = null;
+
+            function prepareData() {
+                VARIANTS.forEach(v => dataByType[v] = []);
+                const sorted = [...data[activeUser].games].sort((a, b) => b.timestamp - a.timestamp);
+                sorted.forEach(g => { if (dataByType[g.type]) dataByType[g.type].push(g); });
+            }
+
+            function renderProfileCard() {
+                const p = profiles[activeUser].profile;
+                const pp = p.profile || {};
+                const c = p.count;
+                const totalPlaySec = p.playTime.total;
+                const hours = Math.floor(totalPlaySec / 3600);
+                const winPct = ((c.win / c.all) * 100).toFixed(1);
+                const memberDays = Math.floor((Date.now() - p.createdAt) / 86400000);
+                const memberYears = (memberDays / 365).toFixed(1);
+
+                document.getElementById('profileCard').innerHTML = `
+                    <div class="profile-avatar"><img src="https://i.imgur.com/d8IPBKz.png" alt="Profile" style="height: 40px; width: 40px; border-radius: 20px;"></div>
+                    <div>
+                        <div class="profile-name">
+                            <a href="${p.url}" target="_blank">${p.username}</a>
+                            ${pp.flag ? `<span style="margin-left:6px;font-size:14px;">🇮🇳</span>` : ''}
+                        </div>
+                        <div class="profile-meta">
+                            ${pp.realName ? pp.realName + ' · ' : ''}${pp.location || ''}
+                        </div>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">All Games</div>
+                        <div class="profile-stat-value">${c.all.toLocaleString()}</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Wins</div>
+                        <div class="profile-stat-value win">${c.win.toLocaleString()}</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Losses</div>
+                        <div class="profile-stat-value loss">${c.loss.toLocaleString()}</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Draws</div>
+                        <div class="profile-stat-value draw">${c.draw.toLocaleString()}</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Win Rate</div>
+                        <div class="profile-stat-value">${winPct}%</div>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Puzzle Rating</div>
+                        <div class="profile-stat-value">${profiles[activeUser].profile.perfs.puzzle.rating}</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Time Played</div>
+                        <div class="profile-stat-value">${hours.toLocaleString()}h</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-label">Member</div>
+                        <div class="profile-stat-value">${memberYears}y</div>
+                    </div>
+                `;
+            }
+
+            function renderVariantSelector() {
+                const container = document.getElementById('variantSelector');
+                container.innerHTML = '';
+                VARIANTS.forEach(v => {
+                    const btn = document.createElement('button');
+                    btn.className = 'variant-btn' + (v === currentVariant ? ' active' : '');
+                    btn.textContent = VARIANT_LABELS[v];
+                    btn.dataset.variant = v;
+                    btn.addEventListener('click', () => {
+                        currentVariant = v;
+                        document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const count = dataByType[v].length;
+                        if (count > PER_GAME_CROWDED && currentAgg === 'game') {
+                            setAgg(count > 2000 ? 'month' : count > 800 ? 'week' : 'day');
+                        } else if (count <= PER_GAME_CROWDED) {
+                            setAgg('game');
+                        }
+                        renderAll();
+                    });
+                    container.appendChild(btn);
+                });
+            }
+
+            function renderStats() {
+                const games = dataByType[currentVariant];
+                if (!games.length) {
+                    document.getElementById('statsBar').innerHTML = '<div style="color:var(--text3);padding:12px;">No games recorded for this variant.</div>';
+                    return;
+                }
+                const livePerfs = profiles[activeUser].profile.perfs;
+                const wins = games.filter(g => g.result === 'win').length;
+                const losses = games.filter(g => g.result === 'loss').length;
+                const draws = games.filter(g => g.result === 'draw').length;
+                const played = games.length;
+                const winRate = ((wins / played) * 100).toFixed(1);
+                const perf = livePerfs[currentVariant] || {};
+                const latestRating = perf.rating || '—';
+                const ratingDelta = perf.prog || 0;
+                const deltaSign = ratingDelta >= 0 ? '+' : '';
+                const deltaClass = ratingDelta > 0 ? 'pos' : ratingDelta < 0 ? 'neg' : 'neu';
+                const provStr = perf.prov ? ' <span style="color:var(--text3);font-size:10px;">?</span>' : '';
+
+                document.getElementById('statsBar').innerHTML = `
+                    <div class="stat-card">
+                        <div class="stat-label">Rating</div>
+                        <div class="stat-value">${latestRating}${provStr}</div>
+                        <div class="stat-badge ${deltaClass}">${deltaSign}${ratingDelta} prog</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Played</div>
+                        <div class="stat-value">${played.toLocaleString()}</div>
+                    </div>
+                    <div class="stat-card wins">
+                        <div class="stat-label">Wins</div>
+                        <div class="stat-value" style="color:var(--win)">${wins.toLocaleString()}</div>
+                    </div>
+                    <div class="stat-card rate">
+                        <div class="stat-label">Win Rate</div>
+                        <div class="stat-value">${winRate}<span style="font-size:14px;color:var(--text3)">%</span></div>
+                    </div>
+                    <div class="stat-card loss">
+                        <div class="stat-label">Losses</div>
+                        <div class="stat-value" style="color:var(--loss)">${losses.toLocaleString()}</div>
+                    </div>
+                    <div class="stat-card draw">
+                        <div class="stat-label">Draws</div>
+                        <div class="stat-value" style="color:var(--draw)">${draws.toLocaleString()}</div>
+                    </div>
+                `;
+            }
+
+            function getBucketKey(timestamp, agg) {
+                const d = new Date(timestamp);
+                if (agg === 'day') {
+                    return d.toISOString().split('T')[0];
+                } else if (agg === 'week') {
+
+                    const day = d.getDay() || 7;
+                    const mon = new Date(d);
+                    mon.setDate(d.getDate() - day + 1);
+                    return mon.toISOString().split('T')[0];
+                } else if (agg === 'month') {
+                    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+                }
+                return null;
+            }
+
+            function aggregateGames(games, agg) {
+
+                if (agg === 'game') return null;
+
+                const buckets = new Map();
+                games.forEach(g => {
+                    const key = getBucketKey(g.timestamp, agg);
+                    if (!buckets.has(key)) buckets.set(key, []);
+                    buckets.get(key).push(g);
+                });
+
+                const result = [];
+                buckets.forEach((gs, key) => {
+                    const avgRating = Math.round(gs.reduce((s, g) => s + g.rating, 0) / gs.length);
+                    const wins = gs.filter(g => g.result === 'win').length;
+                    const losses = gs.filter(g => g.result === 'loss').length;
+                    const draws = gs.filter(g => g.result === 'draw').length;
+                    const maxRating = Math.max(...gs.map(g => g.rating));
+                    const minRating = Math.min(...gs.map(g => g.rating));
+                    result.push({ key, avgRating, wins, losses, draws, count: gs.length, maxRating, minRating, games: gs });
+                });
+                return result.sort((a, b) => a.key.localeCompare(b.key));
+            }
+
+
+            function renderChart() {
+                const games = [...dataByType[currentVariant]].reverse();
+                if (!games.length) return;
+
+                const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+                const gridColor = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.06)';
+                const labelColor = isDark ? '#4a5068' : '#8a90a8';
+                const accentColor = isDark ? '#a8ff78' : '#16803c';
+
+                if (ratingChart) ratingChart.destroy();
+
+                const ctx = document.getElementById('ratingChart').getContext('2d');
+                const gradient = ctx.createLinearGradient(0, 0, 0, 260);
+                gradient.addColorStop(0, isDark ? 'rgba(168,255,120,0.18)' : 'rgba(22,128,60,0.15)');
+                gradient.addColorStop(1, 'rgba(0,0,0,0)');
+
+                const useAgg = currentAgg !== 'game' || games.length > PER_GAME_CROWDED;
+                const effectiveAgg = (currentAgg === 'game' && games.length > PER_GAME_CROWDED) ? 'day' : currentAgg;
+
+                if (currentAgg === 'game') {
+
+                    const labels = games.map(g => new Date(g.timestamp).toISOString().split('T')[0]);
+                    const ratings = games.map(g => g.rating);
+                    const ptColors = games.map(g =>
+                        g.result === 'win' ? '#4ade80' : g.result === 'loss' ? '#f87171' : '#94a3b8');
+
+                    ratingChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels,
+                            datasets: [{
+                                data: ratings,
+                                borderColor: accentColor,
+                                borderWidth: 2,
+                                pointBackgroundColor: ptColors,
+                                pointRadius: 3.5,
+                                pointHoverRadius: 6,
+                                tension: 0,
+                                fill: true,
+                                backgroundColor: gradient
+                            }]
+                        },
+                        options: chartOptions(gridColor, labelColor)
+                    });
+
+                    attachRawTooltip(games);
+
+                } else {
+
+                    const buckets = aggregateGames(games, effectiveAgg);
+                    const labels = buckets.map(b => b.key);
+                    const ratings = buckets.map(b => b.avgRating);
+
+                    const ptColors = buckets.map(b => {
+                        if (b.wins > b.losses && b.wins > b.draws) return '#4ade80';
+                        if (b.losses > b.wins && b.losses > b.draws) return '#f87171';
+                        return '#94a3b8';
+                    });
+
+                    const maxR = buckets.map(b => b.maxRating);
+                    const minR = buckets.map(b => b.minRating);
+
+                    ratingChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels,
+                            datasets: [
+                                {
+
+                                    label: 'Range',
+                                    data: maxR,
+                                    borderColor: 'transparent',
+                                    pointRadius: 0,
+                                    fill: '+1',
+                                    backgroundColor: isDark ? 'rgba(168,255,120,0.07)' : 'rgba(22,128,60,0.07)',
+                                    tension: 0.3,
+                                    order: 2
+                                },
+                                {
+                                    label: 'Min',
+                                    data: minR,
+                                    borderColor: 'transparent',
+                                    pointRadius: 0,
+                                    fill: false,
+                                    tension: 0.3,
+                                    order: 3
+                                },
+                                {
+
+                                    label: 'Avg Rating',
+                                    data: ratings,
+                                    borderColor: accentColor,
+                                    borderWidth: 2.5,
+                                    pointBackgroundColor: ptColors,
+                                    pointRadius: 4,
+                                    pointHoverRadius: 7,
+                                    tension: 0.3,
+                                    fill: false,
+                                    order: 1
+                                }
+                            ]
+                        },
+                        options: chartOptions(gridColor, labelColor)
+                    });
+
+                    attachAggTooltip(buckets, effectiveAgg);
+                }
+            }
+
+            function chartOptions(gridColor, labelColor) {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: gridColor },
+                            ticks: { color: labelColor, maxTicksLimit: 14, font: { family: 'DM Mono', size: 10 } }
+                        },
+                        y: {
+                            grid: { color: gridColor },
+                            ticks: { color: labelColor, font: { family: 'DM Mono', size: 10 } }
+                        }
+                    }
+                };
+            }
+
+            function attachRawTooltip(games) {
+                const tooltipEl = document.getElementById('chartTooltip');
+                const canvas = document.getElementById('ratingChart');
+
+                canvas.addEventListener('mousemove', (e) => {
+                    const pts = ratingChart.getElementsAtEventForMode(e, 'nearest', { intersect: false }, false);
+                    if (!pts.length) { tooltipEl.classList.remove('visible'); return; }
+                    const idx = pts[0].index;
+                    const game = games[idx];
+                    if (!game) { tooltipEl.classList.remove('visible'); return; }
+                    const rc = game.result === 'win' ? 'ct-result-win' : game.result === 'loss' ? 'ct-result-loss' : 'ct-result-draw';
+                    const dateStr = new Date(game.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+                    tooltipEl.innerHTML = `
+                <div class="ct-rating">${game.rating}</div>
+                <div class="ct-sub">vs <a href="https://lichess.org/@/${game.oppN}" target="_blank">${game.oppN}</a> (${game.oppR})</div>
+                <div class="${rc}" style="margin-top:4px;font-size:11px;">${game.result.toUpperCase()} · <a href="https://lichess.org/${game.id}" target="_blank">${game.id}</a></div>
+                <div style="color:var(--text3);font-size:10px;margin-top:2px;">${dateStr} · ${game.clock}</div>
+            `;
+                    positionTooltip(tooltipEl, e);
+                });
+                canvas.addEventListener('mouseleave', () => tooltipEl.classList.remove('visible'));
+            }
+
+            function attachAggTooltip(buckets, agg) {
+                const tooltipEl = document.getElementById('chartTooltip');
+                const canvas = document.getElementById('ratingChart');
+
+                canvas.addEventListener('mousemove', (e) => {
+                    const pts = ratingChart.getElementsAtEventForMode(e, 'nearest', { intersect: false }, false);
+                    if (!pts.length) { tooltipEl.classList.remove('visible'); return; }
+                    const idx = pts[0].index;
+                    const b = buckets[idx];
+                    if (!b) { tooltipEl.classList.remove('visible'); return; }
+                    const label = agg === 'week' ? `Week of ${b.key}` : agg === 'month' ? b.key : b.key;
+                    const wr = ((b.wins / b.count) * 100).toFixed(0);
+                    tooltipEl.innerHTML = `
+                <div class="ct-rating">${b.avgRating} <span style="font-size:12px;color:var(--text3)">avg</span></div>
+                <div class="ct-sub" style="margin-bottom:6px;">${label} · ${b.count} games</div>
+                <div style="font-size:11px;display:flex;gap:10px;">
+                    <span class="ct-result-win">▲ ${b.wins}W</span>
+                    <span class="ct-result-loss">▼ ${b.losses}L</span>
+                    <span class="ct-result-draw">= ${b.draws}D</span>
+                </div>
+                <div style="color:var(--text3);font-size:10px;margin-top:4px;">Win rate ${wr}% · Range ${b.minRating}–${b.maxRating}</div>
+            `;
+                    positionTooltip(tooltipEl, e);
+                });
+                canvas.addEventListener('mouseleave', () => tooltipEl.classList.remove('visible'));
+            }
+
+            function positionTooltip(el, e) {
+                el.classList.add('visible');
+                let tx = e.clientX + 14, ty = e.clientY - 14;
+                if (tx + 210 > window.innerWidth) tx = e.clientX - 220;
+                el.style.left = tx + 'px';
+                el.style.top = ty + 'px';
+            }
+
+            function setAgg(agg) {
+                currentAgg = agg;
+                document.querySelectorAll('.agg-btn').forEach(b => {
+                    b.classList.toggle('active', b.dataset.agg === agg);
+                });
+            }
+
+            document.getElementById('aggToggle').addEventListener('click', (e) => {
+                const btn = e.target.closest('.agg-btn');
+                if (!btn) return;
+                setAgg(btn.dataset.agg);
+                renderChart();
+            });
+
+            function renderFormStrip() {
+                const games = dataByType[currentVariant].slice(0, 30);
+                const strip = document.getElementById('formStrip');
+                strip.innerHTML = '';
+                games.forEach(g => {
+                    const sq = document.createElement('div');
+                    sq.className = 'form-sq ' + g.result;
+                    sq.title = `${g.oppN} (${g.oppR}) — ${g.result}`;
+                    sq.textContent = g.result === 'win' ? 'W' : g.result === 'loss' ? 'L' : 'D';
+                    sq.addEventListener('click', () => {
+                        const row = document.querySelector(`tr[data-id="${g.id}"]`);
+                        if (row) { row.scrollIntoView({ behavior: 'smooth', block: 'center' }); row.click(); }
+                    });
+                    strip.appendChild(sq);
+                });
+            }
+
+            function renderTable() {
+                const games = dataByType[currentVariant];
+                const tbody = document.getElementById('gamesBody');
+                tbody.innerHTML = '';
+                games.forEach((game, idx) => {
+                    const resultClass = `result-${game.result}`;
+                    const dateStr = new Date(game.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+                    const moveCount = game.moves.trim().split(/\s+/).length;
+                    const tr = document.createElement('tr');
+                    tr.dataset.id = game.id;
+                    tr.innerHTML = `
+                        <td style="color:var(--text3)">${idx + 1}</td>
+                        <td><a href="https://lichess.org/${game.id}" target="_blank" onclick="event.stopPropagation()">${game.id}</a></td>
+                        <td>${game.rated ? '✓' : '—'}</td>
+                        <td><span class="color-dot ${game.color}"></span>${game.color}</td>
+                        <td class="my-rating">${game.rating}</td>
+                        <td><a href="https://lichess.org/@/${game.oppN}" target="_blank" onclick="event.stopPropagation()">${game.oppN}</a></td>
+                        <td>${game.oppR}</td>
+                        <td class="${resultClass}">${game.result}</td>
+                        <td>${game.clock}</td>
+                        <td style="color:var(--text3)">${moveCount} ply</td>
+                        <td style="color:var(--text3)">${dateStr}</td>
+                    `;
+                    tr.addEventListener('click', () => toggleMoves(game, tr));
+                    tbody.appendChild(tr);
+                });
+            }
+
+            function toggleMoves(game, tr) {
+                if (expandedRow) {
+                    expandedRow.remove(); expandedRow = null;
+                    document.querySelectorAll('tbody tr.expanded').forEach(r => r.classList.remove('expanded'));
+                }
+                if (tr.dataset.expanded === '1') { tr.dataset.expanded = '0'; return; }
+                document.querySelectorAll('tbody tr').forEach(r => r.dataset.expanded = '0');
+                tr.dataset.expanded = '1'; tr.classList.add('expanded');
+
+                const moveTokens = game.moves.trim().split(/\s+/);
+                const chess = new Chess();
+                const fens = [chess.fen()];
+                moveTokens.forEach(mv => { try { chess.move(mv, { sloppy: true }); fens.push(chess.fen()); } catch (e) { } });
+
+                const expRow = document.createElement('tr');
+                expRow.className = 'moves-row';
+                const td = document.createElement('td');
+                td.colSpan = 11;
+                const expDiv = document.createElement('div');
+                expDiv.className = 'moves-expander';
+                expDiv.innerHTML = `
+                    <div class="moves-header">
+                        <span style="color:var(--text2);font-size:11px;">${game.oppN} (${game.oppR}) · ${game.clock} · ${game.color} · ${game.result}</span>
+                        <a href="https://lichess.org/${game.id}" target="_blank" style="font-size:11px;">Open on Lichess ↗</a>
+                    </div>
+                    <div class="moves-layout">
+                        <div class="moves-list" id="movesList-${game.id}"></div>
+                        <div class="board-panel">
+                            <div class="board-coords">
+                                <div class="board-ranks">8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</div>
+                                <div id="mini-board-${game.id}" class="uni-board"></div>
+                                <div></div>
+                                <div class="board-files">a<span></span>b<span></span>c<span></span>d<span></span>e<span></span>f<span></span>g<span></span>h</div>
+                            </div>
+                            <div class="board-info" id="board-info-${game.id}">Starting position</div>
+                        </div>
+                    </div>
+                `;
+                td.appendChild(expDiv); expRow.appendChild(td); tr.after(expRow); expandedRow = expRow;
+
+                const boardId = `mini-board-${game.id}`;
+                renderUniBoard(boardId, fens[0], null);
+
+                const movesListEl = document.getElementById(`movesList-${game.id}`);
+                const infoEl = document.getElementById(`board-info-${game.id}`);
+                let activeMoveEl = null;
+
+                const startToken = document.createElement('span');
+                startToken.className = 'move-token active';
+                startToken.textContent = 'start';
+                startToken.addEventListener('click', () => {
+                    renderUniBoard(boardId, fens[0], null);
+                    infoEl.textContent = 'Starting position';
+                    if (activeMoveEl) activeMoveEl.classList.remove('active');
+                    startToken.classList.add('active'); activeMoveEl = startToken;
+                });
+                movesListEl.appendChild(startToken);
+                activeMoveEl = startToken;
+
+                let fenIdx = 1;
+                moveTokens.forEach((mv, i) => {
+                    const span = document.createElement('span');
+                    span.className = 'move-token';
+                    const moveNumber = Math.floor(i / 2) + 1;
+                    const side = i % 2 === 0 ? 'W' : 'B';
+                    span.innerHTML = `<span class="move-num">${moveNumber}${i % 2 === 0 ? '.' : '....'}</span>${mv}`;
+                    const capturedFen = fens[fenIdx] || fens[fens.length - 1];
+                    span.addEventListener('mouseenter', () => {
+                        renderUniBoard(boardId, capturedFen, null);
+                        infoEl.textContent = `Move ${moveNumber} (${side === 'W' ? 'White' : 'Black'}): ${mv}`;
+                    });
+                    span.addEventListener('click', () => {
+                        renderUniBoard(boardId, capturedFen, null);
+                        infoEl.textContent = `Move ${moveNumber} (${side === 'W' ? 'White' : 'Black'}): ${mv}`;
+                        if (activeMoveEl) activeMoveEl.classList.remove('active');
+                        span.classList.add('active'); activeMoveEl = span;
+                    });
+                    movesListEl.appendChild(span);
+                    fenIdx++;
+                });
+            }
+
+            const PIECE_UNICODE = {
+                K: { sym: '♔', cls: 'wp' }, Q: { sym: '♕', cls: 'wp' }, R: { sym: '♖', cls: 'wp' },
+                B: { sym: '♗', cls: 'wp' }, N: { sym: '♘', cls: 'wp' }, P: { sym: '♙', cls: 'wp' },
+                k: { sym: '♚', cls: 'bp' }, q: { sym: '♛', cls: 'bp' }, r: { sym: '♜', cls: 'bp' },
+                b: { sym: '♝', cls: 'bp' }, n: { sym: '♞', cls: 'bp' }, p: { sym: '♟', cls: 'bp' },
+            };
+
+            function renderUniBoard(boardId, fen, lastMove) {
+                const el = document.getElementById(boardId);
+                if (!el) return;
+                const placement = fen.split(' ')[0];
+                const ranks = placement.split('/');
+                el.innerHTML = '';
+                ranks.forEach((rankStr, rankIdx) => {
+                    const rankNum = 8 - rankIdx;
+                    const cells = [];
+                    for (const ch of rankStr) {
+                        if (/\d/.test(ch)) { for (let k = 0; k < parseInt(ch); k++) cells.push(null); }
+                        else cells.push(ch);
+                    }
+                    cells.forEach((piece, fileIdx) => {
+                        const fileChar = String.fromCharCode(97 + fileIdx);
+                        const sqName = fileChar + rankNum;
+                        const isLight = (rankIdx + fileIdx) % 2 === 0;
+                        let hlClass = '';
+                        if (lastMove && (sqName === lastMove.from || sqName === lastMove.to))
+                            hlClass = isLight ? ' hl-light' : ' hl-dark';
+                        const sqEl = document.createElement('div');
+                        sqEl.className = 'sq ' + (isLight ? 'light' : 'dark') + hlClass;
+                        if (piece) {
+                            const p = PIECE_UNICODE[piece];
+                            if (p) { const span = document.createElement('span'); span.className = p.cls; span.textContent = p.sym; sqEl.appendChild(span); }
+                        }
+                        el.appendChild(sqEl);
+                    });
+                });
+            }
+
+            function initTheme() {
+                const saved = localStorage.getItem('lichess-dash-theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', saved);
+                document.getElementById('themeToggle').textContent = saved === 'dark' ? '☀' : '☾';
+            }
+
+            document.getElementById('themeToggle').addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                localStorage.setItem('lichess-dash-theme', next);
+                document.getElementById('themeToggle').textContent = next === 'dark' ? '☀' : '☾';
+                renderChart();
+            });
+
+            function renderLastUpdated() {
+                const d = new Date(profiles[activeUser].lastUpdated);
+                document.getElementById('lastUpdated').textContent =
+                    'Updated ' + d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+            }
+
+            function renderAll() {
+                expandedRow = null;
+                renderStats();
+                renderChart();
+                renderFormStrip();
+                renderTable();
+            }
+
+            prepareData();
+            renderProfileCard();
+            renderLastUpdated();
+            renderVariantSelector();
+            initTheme();
+
+
+            const defaultCount = dataByType[currentVariant].length;
+            if (defaultCount > 2000) setAgg('month');
+            else if (defaultCount > 800) setAgg('week');
+            else if (defaultCount > PER_GAME_CROWDED) setAgg('day');
+
+            renderAll();
+
+        };
+        initial();
+    </script>
+</body>
+
+</html>

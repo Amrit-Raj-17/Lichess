@@ -1,8 +1,8 @@
 const fs = require("fs");
 
-const USERNAME = "Heal_Potion";
+const USERNAMES = ["Heal_Potion", "blitz_slayer", "power_factor", "satrit"];
 
-async function fetchProfileInfo() {
+async function fetchProfileInfo(USERNAME) {
     const url = `https://lichess.org/api/user/${USERNAME}`;
 
     const res = await fetch(url, {
@@ -14,9 +14,9 @@ async function fetchProfileInfo() {
     return await res.json();
 }
 
-async function fetchAllGames() {
+async function fetchAllGames(USERNAME) {
     let allGames = [];
-    const url = `https://lichess.org/api/games/user/${USERNAME}`;
+    const url = `https://lichess.org/api/games/user/${USERNAME}?max=100`;
 
     const res = await fetch(url, {
         headers: {
@@ -83,28 +83,34 @@ async function fetchAllGames() {
         });
     }
 
-    console.log(`Fetched: ${allGames.length}`);
+    console.log(`Fetched ${allGames.length} games data for ${USERNAME}`);
     return allGames;
 }
 
 async function main() {
-    const [profile, games] = await Promise.all([
-        fetchProfileInfo(),
-        fetchAllGames()
-    ]);
+    const profiles = {};
+    const data = {};
+    for(const USERNAME of USERNAMES) {
+        const [profile, games] = await Promise.all([
+            fetchProfileInfo(USERNAME),
+            fetchAllGames(USERNAME)
+        ]);
 
-    const output = `
-        const profile = ${JSON.stringify({
-                lastUpdated: Date.now(),
-                profile
-            }, null, 2)};
+        profiles[USERNAME] = {
+            lastUpdated: Date.now(),
+            profile
+        };
 
-        const data = ${JSON.stringify({
-                lastUpdated: Date.now(),
-                games
-            }, null, 2)};
+        data[USERNAME] = {
+            lastUpdated: Date.now(),
+            games
+        };
+    }
+    var output = `
+        const profiles = ${JSON.stringify(profiles, null, 2)};
+
+        const data = ${JSON.stringify(data, null, 2)};
     `;
-
     fs.writeFileSync("data/data.js", output);
 }
 
