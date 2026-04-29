@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <title>OHLC</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/stock.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <script src="data/data.js"></script>
+</head>
+
+<body>
+    <label for="userName">Player</label>
+    <select id="userName" name="username">
+        <option value="Heal_Potion" selected>Heal Potion</option>
+        <option value="blitz_slayer">Blitz Slayer</option>
+        <option value="power_factor">Power Factor</option>
+        <option value="satrit">Satrit</option>
+        <option value="penguin_d4c4">Penguin D4C4</option>
+    </select>
+    <label for="variant">Variant</label>
+    <select name="variant" id="variant">
+        <option value="ultraBullet">ultraBullet</option>
+        <option value="bullet" selected>bullet</option>
+        <option value="blitz">blitz</option>
+        <option value="classical">classical</option>
+        <option value="rapid">rapid</option>
+        <option value="correspondence">correspondence</option>
+        <option value="chess960">chess960</option>
+        <option value="atomic">atomic</option>
+        <option value="antichess">antichess</option>
+        <option value="racingKings">racingKings</option>
+        <option value="crazyhouse">crazyhouse</option>
+        <option value="kingOfTheHill">kingOfTheHill</option>
+        <option value="threeCheck">threeCheck</option>
+        <option value="horde">horde</option>
+    </select>
+    <div id="chartDiv" style="width: 100%; height: 600px;"></div>
+</body>
+<script>
+    var globalRoot = -1;
+    drawChart();
+
+    document.getElementById('userName').addEventListener('change', (e) => {
+        drawChart();
+    })
+    document.getElementById('variant').addEventListener('change', (e) => {
+        drawChart();
+    })
+
+    function convertToOHLC() {
+        const grouped = {};
+
+        const userName = document.getElementById('userName').value;
+        const variant = document.getElementById('variant').value;
+
+        rawData = data[userName].games.filter(x => x.type == variant);
+
+        rawData.forEach((game) => {
+            const day = new Date(game.timestamp);
+            day.setHours(0, 0, 0, 0);
+            const dayKey = day.getTime();
+
+            if (!grouped[dayKey]) {
+                grouped[dayKey] = [];
+            }
+
+            grouped[dayKey].push(game);
+        });
+
+        const finalData = Object.entries(grouped).map(([dayKey, games]) => {
+            games.sort((a, b) => a.timestamp - b.timestamp);
+            const ratings = games.map((g) => g.rating + (g?.ratingDiff || 0));
+
+            return {
+                date: Number(dayKey),
+                open: games[0].rating,
+                close: games[games.length - 1].rating + (games[games.length - 1]?.ratingDiff || 0),
+                high: Math.max(...ratings),
+                low: Math.min(...ratings),
+                volume: games.length,
+            };
+        });
+
+        finalData.sort((a, b) => a.date - b.date);
+
+        return finalData;
+    }
+
+    function drawChart() {
+        const formattedData = convertToOHLC();
+        console.log(formattedData);
+
+        if (globalRoot != -1) {
+            globalRoot.dispose();
+        }
+
+        am5.ready(function () {
+            var root = am5.Root.new("chartDiv");
+            const myTheme = am5.Theme.new(root);
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+            var chart = root.container.children.push(
+                am5xy.XYChart.new(root, {
+                    panX: true,
+                    panY: true,
+                    wheelX: "panX",
+                    wheelY: "zoomX",
+                    paddingLeft: 0
+                })
+            );
+            chart.zoomOutButton.dispose();
+
+            var xAxis = chart.xAxes.push(
+                am5xy.GaplessDateAxis.new(root, {
+                    maxDeviation: 0.5,
+                    baseInterval: {
+                        timeUnit: 'day',
+                        count: 1
+                    },
+                    renderer: am5xy.AxisRendererX.new(root, {
+                        pan: "zoom",
+                        minorGridEnabled: true
+                    }),
+                    tooltip: am5.Tooltip.new(root, {})
+                })
+            );
+            var yAxis = chart.yAxes.push(
+                am5xy.ValueAxis.new(root, {
+                    maxDeviation: 1,
+                    renderer: am5xy.AxisRendererY.new(root, {
+                        pan: "zoom"
+                    })
+                })
+            );
+            var color = root.interfaceColors.get("background");
+            var series = chart.series.push(
+                am5xy.CandlestickSeries.new(root, {
+                    fill: color,
+                    calculateAggregates: true,
+                    stroke: color,
+                    xAxis: xAxis,
+                    yAxis: yAxis,
+                    valueXField: "date",
+                    valueYField: "close",
+                    highValueYField: "high",
+                    lowValueYField: "low",
+                    openValueYField: "open",
+                    calculateAggregates: true,
+                    tooltip: am5.Tooltip.new(root, {
+                        pointerOrientation: "horizontal",
+                        labelText: "O: {openValueY}\nL: {lowValueY}\nH: {highValueY}\nC: {valueY}"
+                    })
+                })
+            );
+            var cursor = chart.set(
+                "cursor",
+                am5xy.XYCursor.new(root, {
+                    xAxis: xAxis
+                })
+            );
+            cursor.lineY.set("visible", false);
+            chart.leftAxesContainer.set("layout", root.verticalLayout);
+            series.events.once("datavalidated", function (ev) {
+                let date = new Date(formattedData.at(-1).date);
+                date.setDate(date.getDate() + 5);
+                const past = Math.min(50, formattedData.length);
+                ev.target.get("xAxis").zoomToDates(new Date(formattedData[formattedData.length - past].date), date);
+            });
+            series.data.setAll(formattedData);
+            var volumeAxis = chart.yAxes.push(
+                am5xy.ValueAxis.new(root, {
+                    height: am5.percent(25),
+                    y: am5.percent(85),
+                    renderer: am5xy.AxisRendererY.new(root, {})
+                })
+            );
+
+            var volumeSeries = chart.series.push(
+                am5xy.ColumnSeries.new(root, {
+                    name: "Volume",
+                    xAxis: xAxis,
+                    yAxis: volumeAxis,
+                    valueXField: "date",
+                    valueYField: "volume",
+                    tooltip: am5.Tooltip.new(root, {
+                        pointerOrientation: "horizontal",
+                        labelText: "V: {valueY}"
+                    }),
+                    clustered: false
+                })
+            );
+
+            volumeSeries.data.setAll(formattedData);
+            globalRoot = root;
+        });
+    }
+</script>
+
+</html>

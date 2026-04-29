@@ -33,6 +33,7 @@
                     </div>
                 </div>
                 <div class="header-right">
+                    <a href="ohlc.html">OHLC</a>
                     <div class="user-select-wrap">
                         <label for="userName">Player</label>
                         <select id="userName" name="username">
@@ -455,9 +456,17 @@
                     const game = games[pts[0].index];
                     if (!game) { tooltipEl.classList.remove('visible'); return; }
                     const rc = `ct-result-${game.result}`;
+                    const rating = game.rating + (game?.ratingDiff || 0);
+                    let ratingHtml = `<div class="ct-rating">${rating}</div>`;
+                    if (game.rated) {
+                        const diff = game.ratingDiff;
+                        const sign = diff > 0 ? '+' : '';
+                        const diffColor = diff > 0 ? 'var(--win)' : diff < 0 ? 'var(--loss)' : 'var(--draw)';
+                        ratingHtml += `<div style="font-size:11px;margin-top:2px;color:${diffColor};text-transform:lowercase;">${sign}${diff}</div>`;
+                    }
                     const dateStr = new Date(game.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
                     tooltipEl.innerHTML = `
-                        <div class="ct-rating">${game.rating}</div>
+                        <div style="display:flex;">${ratingHtml}</div>
                         <div class="ct-sub">vs <a href="https://lichess.org/@/${game.oppN}" target="_blank">${game.oppN}</a> (${game.oppR})</div>
                         <div class="${rc}" style="margin-top:5px;font-size:11px;">${game.result.toUpperCase()} · <a href="https://lichess.org/${game.id}" target="_blank">${game.id}</a></div>
                         <div style="color:var(--text3);font-size:10px;margin-top:3px;">${dateStr} · ${game.clock}</div>

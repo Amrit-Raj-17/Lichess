@@ -71,8 +71,10 @@ async function fetchAllGames(USERNAME) {
         allGames.push({
             id: g.id,
             rating: player.rating,
+            ratingDiff: player.ratingDiff,
             result,
             rated: g.rated,
+            status: g.status,
             color,
             moves: g.moves,
             timestamp: g.createdAt,
