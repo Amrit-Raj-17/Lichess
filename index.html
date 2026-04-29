@@ -239,8 +239,10 @@
             /* ── Last Updated ── */
             function renderLastUpdated() {
                 const d = new Date(profiles[activeUser].lastUpdated);
+                const lastUpdated = new Date(profiles[activeUser].lastUpdated);
                 document.getElementById('lastUpdated').textContent =
-                    'Updated ' + d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+                    'Updated ' + d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) +
+                    ' & ' + lastUpdated.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
             }
 
             /* ── Variant Selector ── */
