@@ -1,4 +1,4 @@
-name: Daily Data Fetch
+name: Hourly Data Fetch
 
 on:
   schedule:
