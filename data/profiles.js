@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1778276534192,
+    "lastUpdated": 1778279907715,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1778276534344,
+    "lastUpdated": 1778279907849,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1778276534499,
+    "lastUpdated": 1778279907980,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1778276534650,
+    "lastUpdated": 1778279908111,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1778276534801,
+    "lastUpdated": 1778279908243,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -527,14 +527,14 @@ const profiles = {
         "antichess": {
           "games": 9,
           "rating": 1495,
-          "rd": 352,
+          "rd": 353,
           "prog": 0,
           "prov": true
         },
         "atomic": {
           "games": 20,
           "rating": 1222,
-          "rd": 311,
+          "rd": 312,
           "prog": 8,
           "prov": true
         },
