@@ -1,7 +1,36 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1778245913819,
+    "lastUpdated": 1778267405619,
     "games": [
+      {
+        "id": "V7lWTMIw",
+        "rating": 2111,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nc6 e3 Nf6 c4 e5 Nc3 exd4 exd4 dxc4 Bxc4 Bg4 O-O Nxd4 Re1+ Be7 Qxd4 Bxf3 Qxd8+ Rxd8 gxf3 O-O Rxe7 c6 Bg5 b5 Bb3 Nh5 Rxa7 h6 Be3 b4 Ne4 Rc8 Nc5 Nf6 Nd7 Rfd8 Nxf6+ gxf6 Rxf7 Rd3 Rxf6+ Kg7 Rxh6 Rxe3 fxe3 Kxh6 Kf2 Kg5 Rg1+ Kf6 Rg4 Rc7 Rxb4 c5 Rc4 Ke5 h4 Kf6 f4 Kf5 Kf3 Kg6 Kg4 Kh6 f5 Rg7+ Kf4 Rc7 f6 Kh5 f7 Rxf7+ Ke5 Re7+ Kd6 Rxe3 Rxc5+ Kxh4 Be6 Rd3+ Rd5 Rg3 b4 Rg8 Bxg8 Kg4 Re5 Kf3 Be6 Kf4 a4 Kf3 a5 Kf4 a6 Kf3 a7 Kf4 a8=Q Kg3 Qe4 Kf2 Qf4+ Kg1 Re3 Kg2 Rg3+ Kh2 Qh4#",
+        "timestamp": 1778258413157,
+        "oppN": "SAMIIROV",
+        "oppR": 2097,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "YjuICnFO",
+        "rating": 2111,
+        "result": "loss",
+        "rated": false,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 e6 Nf3 d5 e3 f5 c4 c6 Nc3 Nf6 cxd5 exd5 Bd3 Ne4 O-O Be7 h3 O-O a3 a5 Bxe4 fxe4 Ne5 Nd7 Nxd7 Bxd7 b4 axb4 Ne2 bxa3 Qb3 Qa5 Nf4 Qb5 Qc2 Bd6 Ne2 Qa4 Qa2 b5 Nc3 Qa5 Bd2 b4 Ne2 Qa4 Rfb1 Rfb8 Nc1 Rb7 Nb3 Rab8 Rc1 Qb5 Rab1 Qa6 Be1 Qa8 Rc2 Rb6 Rbc1 Bc8 Bd2 Ba6 Be1 Bc4 Rb1 Bxb3 Qxb3 Qa5 Ra2 Ra8 Rba1 Qa4 Qb1 b3 Re2 a2 Qb2 Ba3 Qd2 Qb4 Qxb4 Bxb4 Bxb4 Rxb4 Rb2 Rab8 Kh2 Kf7 g4 Ke6 Kg3 Kd6 Rc1 Ra8 Ra1 c5 dxc5+ Kxc5 Kf4 Kc4 Ke5 Kc3 Re2 b2 Rxb2 Rxb2 Kxd5 Rb1 Rxa2 Rxa2 Kxe4 Rxf2 h4 Rh2 h5 Rh4 Kf3 Rhh1 Kg3 Rbg1+ Kf4 Rh4 e4 Rgxg4+ Ke5 Rxe4+ Kd6 Rxh5 Kc6 Rg4 Kc7 Rg6 Kd8 Rhg5 Ke8 h5 Kf8 h4 Kg8 h3 Kf8 h2 Kg8 h1=N Kf8 Nf2 Kg8 Nd3 Kf8 Rg1 Kg8 R6g2 Kf8 g5 Kg8 g4 Kg7 g3 Kg6 Rf2 Kg5 Rf4 Kh5 Rh4+ Kg5 Rg4+ Kxg4 Nf2+ Kf3 Kd2 Kf4 Ke2 Kg5 Kf3 Kh4 Rh1+ Kg5 Rh5+ Kxh5 g2 Kg5 g1=R+ Kf6 Nd1 Ke5 Rg4 Kf5 Ra4 Ke5 Nb2 Kd5 Ke3 Kc5 Kd3 Kb5 Rc4 Ka5 Kc3 Kb5 Nd1 Ka5 Rb4 Ka6 Rb1 Ka5 Nf2 Ka4 Ne4 Ka5 Kc4 Ka6 Kc5 Ka7 Kc6 Ka8 Kc7 Ka7 Ra1#",
+        "timestamp": 1778257777007,
+        "oppN": "smuir",
+        "oppR": 2054,
+        "type": "bullet",
+        "clock": "1+1"
+      },
       {
         "id": "xug5cmSh",
         "rating": 2106,
@@ -203960,7 +203989,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1778245922881,
+    "lastUpdated": 1778267414678,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -207249,7 +207278,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1778245995502,
+    "lastUpdated": 1778267487321,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -233780,7 +233809,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1778246100352,
+    "lastUpdated": 1778267592165,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -272064,7 +272093,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1778246206735,
+    "lastUpdated": 1778267698565,
     "games": [
       {
         "id": "zWtVNgP0",
