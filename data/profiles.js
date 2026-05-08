@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1778203281980,
+    "lastUpdated": 1778214529422,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7103,
-          "rating": 2106,
+          "games": 7104,
+          "rating": 2111,
           "rd": 45,
-          "prog": 3
+          "prog": 14
         },
         "blitz": {
           "games": 2423,
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1778174594669,
+      "seenAt": 1778212247125,
       "playTime": {
-        "total": 3263681,
+        "total": 3263806,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 13779,
-        "rated": 11058,
+        "all": 13780,
+        "rated": 11059,
         "draw": 554,
         "loss": 5280,
-        "win": 7945,
+        "win": 7946,
         "bookmark": 26,
         "playing": 0,
         "import": 7,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1778203282108,
+    "lastUpdated": 1778214529514,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1778203282238,
+    "lastUpdated": 1778214529605,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1778203282366,
+    "lastUpdated": 1778214529696,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1778203282493,
+    "lastUpdated": 1778214529788,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -499,7 +499,7 @@ const profiles = {
         "correspondence": {
           "games": 9,
           "rating": 1478,
-          "rd": 339,
+          "rd": 340,
           "prog": 0,
           "prov": true
         },
@@ -548,7 +548,7 @@ const profiles = {
         "racingKings": {
           "games": 2,
           "rating": 1769,
-          "rd": 386,
+          "rd": 387,
           "prog": 0,
           "prov": true
         },
