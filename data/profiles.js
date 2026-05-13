@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1778657279134,
+    "lastUpdated": 1778666618573,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7132,
-          "rating": 2102,
+          "games": 7133,
+          "rating": 2107,
           "rd": 45,
-          "prog": -23
+          "prog": -13
         },
         "blitz": {
           "games": 2426,
@@ -129,27 +129,27 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1778657213860,
+      "seenAt": 1778662607574,
       "playTime": {
-        "total": 3268187,
+        "total": 3268340,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 13812,
-        "rated": 11090,
+        "all": 13813,
+        "rated": 11091,
         "draw": 556,
         "loss": 5296,
-        "win": 7960,
+        "win": 7961,
         "bookmark": 26,
         "playing": 0,
-        "import": 7,
+        "import": 8,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1778657279291,
+    "lastUpdated": 1778666618664,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1778657279447,
+    "lastUpdated": 1778666618755,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1778657279607,
+    "lastUpdated": 1778666618846,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1778657279764,
+    "lastUpdated": 1778666618937,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
