@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1779816929348,
+    "lastUpdated": 1779824060102,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -25,10 +25,10 @@ const profiles = {
           "prog": -5
         },
         "rapid": {
-          "games": 598,
-          "rating": 1883,
-          "rd": 75,
-          "prog": 83
+          "games": 599,
+          "rating": 1862,
+          "rd": 73,
+          "prog": 54
         },
         "classical": {
           "games": 329,
@@ -131,26 +131,25 @@ const profiles = {
       },
       "seenAt": 1779816284533,
       "playTime": {
-        "total": 3283874,
+        "total": 3285364,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
-      "playing": "https://lichess.org/n13wWM5s/white",
       "count": {
-        "all": 13914,
-        "rated": 11173,
+        "all": 13915,
+        "rated": 11174,
         "draw": 562,
-        "loss": 5339,
+        "loss": 5340,
         "win": 8013,
         "bookmark": 26,
-        "playing": 1,
+        "playing": 0,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1779816929475,
+    "lastUpdated": 1779824060231,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -219,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1779816929598,
+    "lastUpdated": 1779824060360,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -227,7 +226,7 @@ const profiles = {
         "ultraBullet": {
           "games": 34,
           "rating": 1584,
-          "rd": 221,
+          "rd": 222,
           "prog": 78,
           "prov": true
         },
@@ -348,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1779816929724,
+    "lastUpdated": 1779824060488,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -457,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1779816929847,
+    "lastUpdated": 1779824060619,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
