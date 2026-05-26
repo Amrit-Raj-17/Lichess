@@ -1,6 +1,6 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1779788314124,
+    "lastUpdated": 1779806362326,
     "games": [
       {
         "id": "1zf8GOJf",
@@ -5338,7 +5338,7 @@ const data = {
         "color": "black",
         "moves": "e4 e6 Nc3 d5 Nf3 dxe4 Nxe4 Nf6 Nxf6+ Qxf6 d4 Bb4+ c3 Ba5 Be3 c5 Be2 cxd4 Nxd4 Bb6 Bb5+ Bd7 Bxd7+ Nxd7 O-O O-O Re1 Rfd8 Qc2 Rac8 Nf3 Bxe3 Rxe3 Re8 Rd3 Nb6 Rad1 e5 Rd6 Qf4 Qd2 Qxd2 R1xd2 h6 Ne1 e4 Nc2 Nc4 Nb4 Nxd2 Rxd2 e3 fxe3 Rxe3 h3 Rce8 Rd7 a5 Nd5 R3e5 Nf4 b6 g4 Re1+ Kf2 g5 Nh5 R1e2+ Kf1 Re1+ Kf2 R8e2+ Kf3 Re3+ Kf2 R1e2+ Kf1 Rxb2 Nf6+ Kg7 Nh5+ Kg6 Rd6+ Re6 Rxe6+ fxe6 h4 Rb1+ Ke2 Rb2+ Kd3 Rxa2 hxg5 hxg5 Ng3 Rh2 Ne4 Rh3+ Kd4 Re3 Nd6 e5+ Kd5 Rf3 Ke6 Rf5 Ne4 Rf6+ Nxf6 Kg7 Ne4 Kf8 c4 b5 c5 b4 Nd6",
         "timestamp": 1776514409698,
-        "oppN": "mutale_derrick_chelu",
+        "oppN": "MUTALE_DERRICK_CHELU",
         "oppR": 2114,
         "type": "bullet",
         "clock": "1+0"
@@ -8391,7 +8391,7 @@ const data = {
         "color": "white",
         "moves": "d4 e6 Nf3 c5 e3 cxd4 exd4 d5 c3 Nc6 Nbd2 Nf6 Bd3 Be7 Bc2 O-O O-O Bd7 Nb3 Rc8 Bg5 a6 Re1 b5 a4 Na7 axb5 axb5 Rxa7 Qb6 Qa1 Rfd8 Ne5 Be8 Ra6 Qb7 Ra7 Qb6 Rxe7 Ra8 Qd1 Qd6 Bxf6 gxf6 Rxe8+ Rxe8 Nf3 f5 Qd3 Qe7 Ne5 Qf6 Qg3+ Qg7 Qxg7+ Kxg7 Nc6 Ra2 Rb1 Rea8 Nb4 R2a4 Nc5 Ra1 h3 Rxb1+ Bxb1 Ra1 Kh2 Rxb1 Kg3 Rxb2 Nbd3 Rd2 Ne5 Rc2 Ncd7 Rxc3+ Kf4 b4 g3 b3 Nd3 Rc4 Nb2 Rxd4+ Ke3 Rc4 Ke2 Rc2+ Kd3 Rxb2 Kc3 Rxf2 Kxb3 Rf3+",
         "timestamp": 1774893016086,
-        "oppN": "mutale_derrick_chelu",
+        "oppN": "MUTALE_DERRICK_CHELU",
         "oppR": 2046,
         "type": "bullet",
         "clock": "1+0"
@@ -205950,7 +205950,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1779788323107,
+    "lastUpdated": 1779806371530,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -209239,7 +209239,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1779788395639,
+    "lastUpdated": 1779806444237,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -235770,7 +235770,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1779788500382,
+    "lastUpdated": 1779806549153,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -274054,7 +274054,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1779788610212,
+    "lastUpdated": 1779806655618,
     "games": [
       {
         "id": "zWtVNgP0",
