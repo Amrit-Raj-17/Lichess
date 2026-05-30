@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1780138972074,
+    "lastUpdated": 1780143072833,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7238,
-          "rating": 2091,
+          "games": 7239,
+          "rating": 2086,
           "rd": 45,
-          "prog": -5
+          "prog": -4
         },
         "blitz": {
           "games": 2430,
@@ -131,26 +131,25 @@ const profiles = {
       },
       "seenAt": 1780138960970,
       "playTime": {
-        "total": 3289171,
+        "total": 3289312,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
-      "playing": "https://lichess.org/wV12uZzp/white",
       "count": {
-        "all": 13947,
-        "rated": 11205,
+        "all": 13948,
+        "rated": 11206,
         "draw": 563,
-        "loss": 5357,
+        "loss": 5358,
         "win": 8027,
         "bookmark": 26,
-        "playing": 1,
+        "playing": 0,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1780138972165,
+    "lastUpdated": 1780143072986,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -219,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1780138972257,
+    "lastUpdated": 1780143073139,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -348,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1780138972347,
+    "lastUpdated": 1780143073291,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -457,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1780138972439,
+    "lastUpdated": 1780143073444,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
