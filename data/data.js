@@ -1,7 +1,187 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1780254455550,
+    "lastUpdated": 1780280345875,
     "games": [
+      {
+        "id": "zdENPfL6",
+        "rating": 2050,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 d6 Nf3 Nf6 e3 c6 c4 d5 Nc3 Bf5 cxd5 cxd5 Bd3 e6 O-O Nc6 Bxf5 exf5 Qc2 Qd7 a3 Bd6 Nb5 Bb8 b4 O-O Nc3 a6 Bb2 Qd6 Qxf5 Ne7 Qg5 Ne4 Nxe4 dxe4 d5 f6 Qg4 exf3 g3 Qxd5 Rfd1 Qf5 Qxf5 Nxf5 Rd7 Be5 Bxe5 fxe5 Rad1 e4 g4 Rae8 gxf5 h5 f6 Rxf6 Rxb7 Rg6+ Kf1 Rg2",
+        "timestamp": 1780260973337,
+        "oppN": "Messi2019",
+        "oppR": 2034,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "Dnp4QjwP",
+        "rating": 2056,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "d4 d5 c4 e6 Nf3 Nf6 Nc3 c5 cxd5 exd5 Bg5 cxd4 Nxd4 Be7 e3 Nc6 Be2 O-O O-O Nxd4 Qxd4 Be6 Rad1 h6 Bh4 a6 Bf3 Rc8 Bg3 Bc5 Qd2 Re8 Be5 Be7 Nxd5 Nxd5 Bxd5 Bxd5 Qxd5 Qxd5 Rxd5 Bb4 a3 Bf8 Rfd1 Rc2 Bc3 Rc8 g3 b5 Rd8 Rxd8 Rxd8 Rc1+ Kg2 g6 Bb4 Kg7 Rxf8 Kf6 Bc3+ Ke6 Ra8 b4 Bxb4 Kf5 Rxa6 g5 Ra5+ Kg6 Bd2 f6 Bxc1",
+        "timestamp": 1780260841062,
+        "oppN": "BuddyyGuyy",
+        "oppR": 2073,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "nEzjvULN",
+        "rating": 2049,
+        "ratingDiff": 7,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 Nf3 e6 d4 d5 exd5 exd5 dxc5 Bxc5 Bb5+ Bd7 Bxd7+ Nxd7 O-O Ne7 Nc3 Nf6 Bg5 O-O Bxf6 gxf6 Re1 d4 Ne4 Bb6 Nxf6+ Kh8",
+        "timestamp": 1780260753477,
+        "oppN": "Cherifabdellah22",
+        "oppR": 2078,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "KTIVaSwk",
+        "rating": 2043,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 g6 Nf3 Bg7 e3 Nf6 c4 O-O Nc3 d6 Be2 Bg4 O-O Nbd7 h3 Bxf3 Bxf3 c6 b3 e5 dxe5 Nxe5 Be2 Qb6 Bb2 Rad8 Qc2 Rfe8 Rfd1 d5 cxd5 Nxd5 Nxd5 Rxd5 Rxd5 cxd5 Rd1 Rd8 Bd4 Qc7 Qxc7",
+        "timestamp": 1780260690679,
+        "oppN": "Cherifabdellah22",
+        "oppR": 2084,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "ajTnvwvA",
+        "rating": 2043,
+        "ratingDiff": 0,
+        "result": "draw",
+        "rated": true,
+        "status": "stalemate",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 e5 e3 e4 Nfd2 d5 c4 Nc6 Nc3 dxc4 Bxc4 Be6 Bb3 Bxb3 Qxb3 Bd6 d5 Na5 Qb5+ c6 dxc6 Nxc6 Ndxe4 Nxe4 Nxe4 Bb4+ Bd2 Bxd2+ Nxd2 O-O Nb3 Rb8 O-O Qh4 g3 Qh3 Qd5 h5 Qg2 Qg4 Rfd1 h4 h3 Qg5 gxh4 Qxh4 Rac1 Rbd8 Rxd8 Rxd8 Nd4 Ne5 Nf3 Nxf3+ Qxf3 Rd6 Rc8+ Kh7 Qf5+ g6 Qxf7+ Kh6 Rh8+ Kg5 Qe7+ Rf6 Rxh4 Kxh4 Qxf6+ Kxh3 Qxg6 b6 Qf7 a6 Qb7 b5 Qb6 a5 Qxa5 b4 Qxb4",
+        "timestamp": 1780260558827,
+        "oppN": "masande",
+        "oppR": 2058,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "P2BRzXH0",
+        "rating": 2038,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "e4 c5 Nf3 e6 Bc4 d5 O-O dxc4 d3 Nc6 dxc4 Qxd1 Rxd1 g6 Bg5 Bg7 c3 Nge7 b4 cxb4 cxb4 Nxb4 Bxe7 Kxe7 Nc3 b6 Nb5 Bb7 Rab1 Nc6 Nfd4 Nxd4 Nxd4 Rad8 Nf3 Bxe4 Rxd8 Rxd8 Rd1 Rxd1+ Ne1 Rxe1#",
+        "timestamp": 1780260499045,
+        "oppN": "Riccardo1821",
+        "oppR": 1985,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "DLn2VtdP",
+        "rating": 2033,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 Nc3 e6 Nf3 d5 exd5 exd5 d4 Nf6 Bb5+ Bd7 Qe2+ Be7 O-O Bxb5 Qxb5+ Qd7 Re1 cxd4 Nxd4 a6 Qxd7+ Nbxd7 Nf5 Ng8 Nxd5 Rd8 Ndxe7 Nxe7 Nxe7 Kf8 Bg5 f6 Bf4 Nc5 Nf5 Kf7 Nd6+ Kg6 Rad1 h5 h3 Rhf8 Bh2 Nd7 Nxb7 Ne5 Bxe5 Rxd1 Rxd1 fxe5 Rd6+ Kh7 Nc5 Rc8 b4 a5 a3 axb4 axb4 Rb8 Nd3 e4 Nf4 Rxb4 c4 Rxc4 Rd7 Rc1+",
+        "timestamp": 1780260365744,
+        "oppN": "Sir_Nikita_SPBU",
+        "oppR": 1980,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "Xo9LNklt",
+        "rating": 2040,
+        "ratingDiff": -7,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 f6 Nf3 e6 e3 Nc6 c4 d5 Nc3 dxc4 Bxc4 Bd7 Be2 a6 Kf1 b5 g3 b4 Nb1 h5 Kg2 h4 Nxh4 Rxh4 gxh4 e5 dxe5 fxe5 Bf3 Qxh4 Qd5 Bh3+ Kg1 Nce7 Qxa8+ Kf7 Qe4 Qg5+ Bg2 Nf6 Qf3 Be6 Qg3 Qf5 e4 Nxe4 Bxe4 Qxe4 Be3 Bd5 f3 Qxe3+ Qf2 Qg5+ Kf1 Qc1+ Qe1 Bc4+ Kf2 Qxb2+ Nd2 Nf5 Rb1 Bc5+ Kg2 Qxa2 Rc1 Ne3+ Kg3 Be6 Rxc5 Nf5+ Kf2 b3 Rc1 b2 Rb1 Qd5 Ne4 Qd3 Qe2 Qxb1",
+        "timestamp": 1780260219317,
+        "oppN": "Mykovalenko23",
+        "oppR": 1958,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "VylH5NHb",
+        "rating": 2046,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "f4 d5 Nf3 e6 e3 c5 b3 Nf6 Bb2 Nc6 Bxf6 Qxf6 Nc3 Qd8 Bb5 g6 Bxc6+ bxc6 Ne5 Bg7 O-O Qc7 d4 cxd4 exd4 Bb7 Na4 O-O Nc5 Rab8 c3 a5 g4 Ba8 Qe2 Rfd8 Rae1 Re8 Qd2 Rbd8 f5 exf5 gxf5 Bxe5 dxe5 Qb6 Qd4 a4 f6 axb3 axb3 Bb7 Nxb7 Qxd4+ cxd4 Rb8 Nc5 Rb5 Rb1 Reb8 b4 h5 Rf2 Kf8 Rfb2 Ke8 Na6 R8b6 Nc7+ Kd7 Nxb5 Rxb5 Rc1 Ke6 Rc5 Rxc5 bxc5 Kf5 Rb7 Ke4 Rxf7 Kxd4 Rg7 Kxc5 f7 d4 f8=Q+ Kc4 Rc7 d3 Qd6 c5 Qc6 Kc3 Qxc5+ Kd2 Qd4 Ke2 Rc3 d2 Qe3+ Kd1 Rd3 Kc2 Qxd2+ Kb1 Re3",
+        "timestamp": 1780260068136,
+        "oppN": "Birdyfox",
+        "oppR": 2005,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "hIE1b4Kz",
+        "rating": 2045,
+        "ratingDiff": 1,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 Nc6 c4 dxc4 Nc3 Bf5 a3 e6 Bxc4 Be4 O-O Bd5 Bd3 Bd6 Nxd5 exd5 Re1 Ne4 Qc2 O-O Bxe4 dxe4 Qxe4 Qf6 Bd2 Ne7 Bc3 Nf5 Ne5 Rfe8 Qxb7 Qh6 h3 Qg5 Qf3 Nh4 Qxf7+ Kh8 g3 Rf8 Qc4 Nf3+ Nxf3 Rxf3 Qe2 Rff8 Kg2 Qd5+ Kg1 Bxg3 fxg3 Qd6 Qg2 Rf6 Rf1 Rg6 Rf3 Re8 Raf1 h6 d5 Qxd5 Rf8+ Rxf8 Rxf8+ Kh7 Qxd5",
+        "timestamp": 1780258879998,
+        "oppN": "loll",
+        "oppR": 1547,
+        "type": "bullet",
+        "clock": "0+4"
+      },
+      {
+        "id": "nQWrw40a",
+        "rating": 2045,
+        "ratingDiff": 0,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "black",
+        "moves": "e4 c5 Nc3 e6 Bc4 d5 d3 dxc4 dxc4 Qxd1+ Nxd1 Nc6 Ne3 b6 Nf3 Bb7 O-O g6 c3 Bg7 Bd2 Nf6 b4 Nxe4 Be1 cxb4 cxb4 Bxa1 b5 Nd4 Nxd4 Bxd4 Ng4 h5 Ne3 Bxe3 fxe3 Ke7 Bb4+ Nc5 e4 Bxe4 Re1 Bf5 a4 Rad8 a5 Rd4 Rc1 Rhd8 Kf2 Re4 Kf3 Rdd4 Bc3 Rxc4 axb6 axb6 h3 Nd3 Rc2 Ne1+ Bxe1 Rxc2",
+        "timestamp": 1780258702619,
+        "oppN": "loll",
+        "oppR": 1548,
+        "type": "bullet",
+        "clock": "0+4"
+      },
+      {
+        "id": "5eKExsCK",
+        "rating": 2044,
+        "ratingDiff": 1,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 Nc6 c4 Bf5 Nc3 dxc4 Bxc4 a6 O-O b5 Bd3 Bxd3 Qxd3 e6 a3 Bd6 Bd2 O-O Qe2 h6 Rac1 Nh7 Rfd1 Ne7 Ne4 Nf5 Bc3 Be7 Nc5 Nh4 Nxh4 Bxh4 Nd3 Qg5 Ne1 Qg6 Nf3 Be7 Qd3 Qg4 h3 Qf5 Qxf5 exf5 Ne5 Bd6 Kf1 Nf6 Ke2 Ne4 Bb4 Bxb4 axb4 a5 bxa5 Rxa5 Rxc7 Ra2 Rc2 Nd6 Nf3 Nc4 Rb1 Na3 bxa3 Rxc2+ Ke1 Ra2 Rxb5 Rxa3 Ne5 g6 Ke2 Ra2+ Kf3 f6 Nxg6 Rc8 Ne7+ Kf7 Nxc8 Rc2 Nd6+ Ke6 Nxf5 h5 Ng3 h4 Ne4 f5 Nc5+ Kf6 Rb6+ Kg5 Ne6+ Kf6 Nf4+ Kg5 Rg6#",
+        "timestamp": 1780258427261,
+        "oppN": "loll",
+        "oppR": 1548,
+        "type": "bullet",
+        "clock": "0+4"
+      },
       {
         "id": "agybSzlo",
         "rating": 2049,
@@ -206789,7 +206969,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1780254464527,
+    "lastUpdated": 1780280354904,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -210078,7 +210258,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1780254537080,
+    "lastUpdated": 1780280427504,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -236609,7 +236789,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1780254641822,
+    "lastUpdated": 1780280532295,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -274893,7 +275073,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1780254748135,
+    "lastUpdated": 1780280640096,
     "games": [
       {
         "id": "zWtVNgP0",
