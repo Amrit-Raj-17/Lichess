@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1780538536834,
+    "lastUpdated": 1780555961506,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7283,
-          "rating": 2014,
+          "games": 7284,
+          "rating": 2019,
           "rd": 45,
-          "prog": -30
+          "prog": -19
         },
         "blitz": {
           "games": 2431,
@@ -68,7 +68,7 @@ const profiles = {
         "antichess": {
           "games": 21,
           "rating": 1008,
-          "rd": 214,
+          "rd": 215,
           "prog": -540,
           "prov": true
         },
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1780506086460,
+      "seenAt": 1780542695332,
       "playTime": {
-        "total": 3301897,
+        "total": 3302043,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 13999,
-        "rated": 11253,
+        "all": 14000,
+        "rated": 11254,
         "draw": 567,
         "loss": 5383,
-        "win": 8049,
+        "win": 8050,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1780538536989,
+    "lastUpdated": 1780555961656,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1780538537146,
+    "lastUpdated": 1780555961806,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -226,7 +226,7 @@ const profiles = {
         "ultraBullet": {
           "games": 34,
           "rating": 1584,
-          "rd": 222,
+          "rd": 223,
           "prog": 78,
           "prov": true
         },
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1780538537301,
+    "lastUpdated": 1780555961955,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1780538537455,
+    "lastUpdated": 1780555962105,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
