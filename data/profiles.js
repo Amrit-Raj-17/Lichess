@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1780746440685,
+    "lastUpdated": 1780750572021,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7305,
-          "rating": 2060,
+          "games": 7309,
+          "rating": 2037,
           "rd": 45,
-          "prog": 27
+          "prog": -7
         },
         "blitz": {
           "games": 2431,
@@ -129,27 +129,28 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1780740740639,
+      "seenAt": 1780750518233,
       "playTime": {
-        "total": 3305899,
+        "total": 3306370,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
+      "playing": "https://lichess.org/xL4rQ6v6/white",
       "count": {
-        "all": 14026,
-        "rated": 11275,
+        "all": 14030,
+        "rated": 11279,
         "draw": 567,
-        "loss": 5393,
+        "loss": 5397,
         "win": 8066,
         "bookmark": 26,
-        "playing": 0,
+        "playing": 1,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1780746440814,
+    "lastUpdated": 1780750572129,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +219,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1780746440944,
+    "lastUpdated": 1780750572237,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +348,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1780746441072,
+    "lastUpdated": 1780750572344,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +457,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1780746441202,
+    "lastUpdated": 1780750572453,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
