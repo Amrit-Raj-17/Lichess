@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1781099829701,
+    "lastUpdated": 1781110522657,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7330,
-          "rating": 2101,
+          "games": 7331,
+          "rating": 2093,
           "rd": 45,
-          "prog": 28
+          "prog": 14
         },
         "blitz": {
           "games": 2432,
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1781091743571,
+      "seenAt": 1781108295513,
       "playTime": {
-        "total": 3310695,
+        "total": 3310821,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14058,
-        "rated": 11301,
+        "all": 14059,
+        "rated": 11302,
         "draw": 569,
-        "loss": 5404,
+        "loss": 5405,
         "win": 8085,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1781099829793,
+    "lastUpdated": 1781110522748,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1781099829884,
+    "lastUpdated": 1781110522840,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1781099829976,
+    "lastUpdated": 1781110522931,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1781099830068,
+    "lastUpdated": 1781110523023,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -562,7 +562,7 @@ const profiles = {
         "puzzle": {
           "games": 393,
           "rating": 2562,
-          "rd": 303,
+          "rd": 304,
           "prog": 0,
           "prov": true
         },
