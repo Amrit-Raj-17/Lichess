@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1781119720753,
+    "lastUpdated": 1781127285752,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7331,
-          "rating": 2093,
+          "games": 7332,
+          "rating": 2086,
           "rd": 45,
-          "prog": 14
+          "prog": 3
         },
         "blitz": {
           "games": 2432,
@@ -131,26 +131,25 @@ const profiles = {
       },
       "seenAt": 1781119689651,
       "playTime": {
-        "total": 3310821,
+        "total": 3310956,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
-      "playing": "https://lichess.org/3eMp3xra/white",
       "count": {
-        "all": 14059,
-        "rated": 11302,
+        "all": 14060,
+        "rated": 11303,
         "draw": 569,
-        "loss": 5405,
+        "loss": 5406,
         "win": 8085,
         "bookmark": 26,
-        "playing": 1,
+        "playing": 0,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1781119720858,
+    "lastUpdated": 1781127285900,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -219,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1781119720965,
+    "lastUpdated": 1781127286049,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -241,7 +240,7 @@ const profiles = {
         "blitz": {
           "games": 193,
           "rating": 1944,
-          "rd": 201,
+          "rd": 202,
           "prog": -25,
           "prov": true
         },
@@ -348,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1781119721070,
+    "lastUpdated": 1781127286197,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -457,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1781119721178,
+    "lastUpdated": 1781127286347,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -472,7 +471,7 @@ const profiles = {
         "bullet": {
           "games": 524,
           "rating": 1600,
-          "rd": 291,
+          "rd": 292,
           "prog": -47,
           "prov": true
         },
