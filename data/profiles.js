@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1781235557063,
+    "lastUpdated": 1781251836976,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7339,
-          "rating": 2084,
+          "games": 7340,
+          "rating": 2078,
           "rd": 45,
-          "prog": -17
+          "prog": -29
         },
         "blitz": {
           "games": 2432,
@@ -27,7 +27,7 @@ const profiles = {
         "rapid": {
           "games": 600,
           "rating": 1865,
-          "rd": 77,
+          "rd": 78,
           "prog": 52
         },
         "classical": {
@@ -103,7 +103,7 @@ const profiles = {
         "puzzle": {
           "games": 256,
           "rating": 2404,
-          "rd": 140,
+          "rd": 141,
           "prog": 0,
           "prov": true
         },
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1781212648411,
+      "seenAt": 1781237455923,
       "playTime": {
-        "total": 3311933,
+        "total": 3311983,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14067,
-        "rated": 11310,
+        "all": 14068,
+        "rated": 11311,
         "draw": 569,
-        "loss": 5410,
+        "loss": 5411,
         "win": 8088,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1781235557216,
+    "lastUpdated": 1781251837071,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1781235557367,
+    "lastUpdated": 1781251837165,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -247,7 +247,7 @@ const profiles = {
         "rapid": {
           "games": 52,
           "rating": 1946,
-          "rd": 210,
+          "rd": 211,
           "prog": 84,
           "prov": true
         },
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1781235557519,
+    "lastUpdated": 1781251837260,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1781235557670,
+    "lastUpdated": 1781251837355,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
