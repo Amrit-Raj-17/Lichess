@@ -1,6 +1,6 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1781607446982,
+    "lastUpdated": 1781627155046,
     "games": [
       {
         "id": "r6lqexBN",
@@ -106540,7 +106540,7 @@ const data = {
         "color": "white",
         "moves": "d4 Nf6 Nf3 e6 Bf4 c5 e3 cxd4 exd4 d5 c3 Nc6 Nbd2 Bd6 Be3 O-O Be2 Bd7 O-O h5 g3 Ng4 Re1 Nge5 Nxe5",
         "timestamp": 1715959009834,
-        "oppN": "Imjah",
+        "oppN": "imjah",
         "oppR": 1974,
         "type": "bullet",
         "clock": "1+0"
@@ -208889,7 +208889,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1781607456029,
+    "lastUpdated": 1781627164213,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -212178,7 +212178,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1781607528652,
+    "lastUpdated": 1781627236929,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -238709,7 +238709,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1781607633499,
+    "lastUpdated": 1781627341852,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -276993,7 +276993,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1781607739876,
+    "lastUpdated": 1781627448345,
     "games": [
       {
         "id": "zWtVNgP0",
