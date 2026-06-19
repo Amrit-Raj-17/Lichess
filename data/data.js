@@ -1,7 +1,142 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1781837296917,
+    "lastUpdated": 1781880264187,
     "games": [
+      {
+        "id": "edm98J4Y",
+        "rating": 2030,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 f4 e6 Nf3 d5 e5 Nc6 Bb5 g6 Bxc6+ bxc6 d3 Bg7 O-O Ne7 c3 Nf5 Be3 Bb7 Bf2 O-O Qc2 Rc8 Nbd2 Re8 Nb3 c4 Nbd4 c5 Nxf5 exf5 dxc4 dxc4 Rad1 Qb6 Rb1 Bxf3 gxf3 Red8 Qa4 Rd2 Qxc4 Rcd8 Bxc5 Qb7 b3 Rxa2 Rf2 Rxf2 Kxf2 Rc8 b4 a5 Rd1 axb4 cxb4 Qc6 Qd5 Qxd5 Rxd5 Bf8 Bxf8 Kxf8 Rb5 Rc2+ Kg3 Rb2 Rb8+ Kg7 b5 h5 b6 Kh6 h4 Kg7 b7 Rb3 Kg2 Rb2+ Kg3 Rb3 Kf2 Rb2+ Ke3 Rb3+ Ke2 Rb1 e6 fxe6 Kd3 Kf7 Kd4 Rb6 Ke5 Rb5+ Kd6 Rb6+ Kc7 Rb1 Kc6 Rc1+ Kb6 Rb1+ Kc7 Rb2 Kd8 Rd2+ Kc7 Rb2 Kc6 Rc2+ Kb5 Rb2+ Kc4 Rb1 Kc3 Rb6 Kc2 Rb5 Kd2 Rb6 Ke2 Rxb7 Kf2 Rxb8",
+        "timestamp": 1781862928943,
+        "oppN": "Kalnakuilis",
+        "oppR": 2046,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "LamwzD5Y",
+        "rating": 2024,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 g6 e3 Bg7 c4 O-O Nc3 d6 Be2 Nbd7 O-O c5 b3 cxd4 exd4 e5 Bb2 exd4 Nxd4 Nc5 Nd5 Nxd5 cxd5 Qg5 Ba3 Bh3 Bf3 Ne4 Re1 Rae8 Bb2 Bf5 Rb1 Nxf2 Kxf2 Bxb1 Qxb1 Rxe1 Kxe1 Qh4+ Kf1 Bxd4 Bxd4 Qxd4 Qe1 Qc5 Qe7 Qb5+ Kf2 Qb6+ Kg3 Qd4 Qxb7 Re8 Qc6 Qe5+ Kf2 h5 h3 Qd4+ Kg3 Re5 Qxd6 Rg5+ Kh2 Qe5+ Qxe5 Rxe5 Kg3 Re8 d6 Rd8 d7 Kf8 Bc6 Ke7 Ba4 Kd6 b4 Kc7 b5 Kb6 Bb3 Rxd7 Bxf7 Re7 Bxg6 Rf7 Bf5 Kc5 Kf4 Rxf5+ Kxf5 Kxb5 Kg5 Ka4 Kxh5 Ka3 g4 Kxa2 g5 a5 g6 a4 g7 a3 g8=Q+ Kb2 Qg5 a2 Qg4",
+        "timestamp": 1781856794655,
+        "oppN": "stupidpotatohead",
+        "oppR": 2032,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "ixzoFCdi",
+        "rating": 2031,
+        "ratingDiff": -7,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "d3 c5 e4 e6 Nf3 d5 Be2 Nc6 exd5 exd5 O-O Nf6 h3 g6 Nbd2 Bg7 b4 O-O bxc5 Re8 Bb2 Qe7 Re1 Qxc5 Nb3 Qd6 Rb1 Bf5 Nfd4 Nxd4 Nxd4 Be6 Bf3 Nd7 Nb5 Qb6 Bxg7 Kxg7 Qd2 a6 Qc3+ Kg8 Nd4 Qd8 Rxb7 Rc8 Qb2 a5 Nxe6 Rxe6 Bxd5 Rxe1+ Kh2 Nc5 Bxf7+ Kf8 Qh8#",
+        "timestamp": 1781849881880,
+        "oppN": "Sprakat",
+        "oppR": 1978,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "4jg5Z9Lo",
+        "rating": 2025,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 e6 c4 c5 Nc3 Nc6 dxc5 Bxc5 cxd5 exd5 Be2 O-O O-O b6 b3 Bb7 Bb2 Re8 Rc1 Ne7 Re1 Rc8 Nd4 Bxd4 exd4 Nd7 Bf3 Nc6 Nxd5 Nf6 Rxe8+ Nxe8 Qd2 Nd6 Ne3 Nb5 Nc4 Nbxd4 Bxd4 Qxd4 Qxd4 Nxd4 Bxb7 Ne2+ Kf1 Rc7 Re1 Rxb7 Rxe2 g6 g3 Kg7 h4 Kf6 Ne3 h5 Nd5+ Kg7 Nc3 Rd7 Na4 Rd1+ Kg2 Ra1 Nc3 Rc1 Nd5 Rc5 Nf4 Rf5 Nd3 Rd5 Ne1 Rc5 Nf3 Rf5 Ne1 Rc5 Nd3 Rc6 Ne5 Rf6 Nc4 Rc6 Re7 b5 Ne5 Rf6 Nf3 Rf5 Rxa7 Rf6 Rb7 b4 Rxb4 Rf5 Rc4 Re5 Ng5 Rf5 f3 f6 g4 Rxg5 hxg5 fxg5 gxh5 Kf7 Kg3 gxh5 f4 Kf6 fxg5+ Ke6 g6 Kf6 g7 Kxg7 Rc5 Kh6 Rxh5+ Kxh5 b4 Kh6 b5 Kg6 b6 Kg5 b7 Kf6 b8=Q Kf5 Qb4 Ke5 a4 Kd5 a5 Ke5 a6 Kf5 a7 Kg5 a8=Q Kh5 Qaa5+ Kg6 Qbb6+ Kf7 Qaa7+ Ke8 Qbb8#",
+        "timestamp": 1781848983192,
+        "oppN": "MasterGrandNecip",
+        "oppR": 2004,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "NoQJG1EW",
+        "rating": 2019,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "black",
+        "moves": "b3 d5 Bb2 e6 e4 Nf6 exd5 exd5 d3 c5 Nf3 Be7 Nbd2 O-O Bxf6 Be6 Rb1 Bxf6 Be2 Nc6 O-O Re8 a3 g6 c4 dxc4 dxc4 Bg7 Qc2 Qe7 Rbd1 Bg4 Rfe1 Qd7 Bf1 Rxe1 Nxe1 Bxd1 Qxd1 Rd8 Nef3 Nd4 Qc2 Nxf3+ Nxf3 b6 Qe4 Qd3 Qb7 Qd7 Qe4 h5 a4 Re8 Qc2 Qe6 Qd2 Qe4 Ng5 Qd4 Qc2 Bh6 Nf3 Qf4 Bd3 Bg7 h3 Be5 Qe2 Re7 Nxe5 Qxe5 Qb2 Qxb2",
+        "timestamp": 1781839816221,
+        "oppN": "Cria37alex",
+        "oppR": 2028,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "erDxUe3Y",
+        "rating": 2025,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 c6 Nf3 b6 e3 Bb7 c4 Qc7 Nc3 d6 Be2 Nd7 O-O O-O-O b3 Ngf6 Bb2 h5 Rc1 Ng4 h3 e5 dxe5 dxe5 hxg4 hxg4 Ng5 Nf6 f3 c5 Qc2 gxf3 Bxf3 Bxf3 Qf5+ Kb8 Qxf3 e4 Qf4 Bd6 Qf2 Bh2+ Kh1 Bg3+ Kg1 Bxf2+ Kxf2 Ng4+ Ke2 f6 Ngxe4 Rh2 Rg1 Re8 Ng3 Nxe3 Kd2 Qxg3 Rce1 Rxg2+ Rxg2 Qxg2+ Kc1 Qc2#",
+        "timestamp": 1781837492917,
+        "oppN": "pilotSS20",
+        "oppR": 2025,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "tlgkYlyn",
+        "rating": 2031,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "f3 c5 c3 e6 d3 d5 e3 Nf6 d4 g6 dxc5 Bg7 b4 O-O e4 a5 Bg5 axb4 e5 h6 Bxf6 Bxf6 exf6 Qxf6 Qb3 bxc3 Qxc3 Qxc3+ Nxc3 Nc6 Bb5 Bd7 a4 Ne5 Rb1 Bxb5 axb5 Ra3 Nce2 Nc4 Nd4 Re3+ Kf2 Ra8 Nge2 Ra2 Rhe1 Rea3 c6 bxc6 bxc6 Ra8 c7 Kg7 Rb8 Nd6 Rc1 Kf6 Nb5 Nxb5 c8=Q Nd6 Rxa8 Nxc8 Rxa2 Nd6 Rd2 Nf5 g4 h5 gxf5 gxf5 h3 Kg5 Rg1+ Kf6 f4 d4 Ra2 e5 Nxd4 Ke7 fxe5 f6 exf6+ Kf7 Nxf5 Kxf6 Rg5 Ke5 Rxh5 Kf6 Rh7 Kg6 Rh8",
+        "timestamp": 1781837288089,
+        "oppN": "vyvas",
+        "oppR": 2024,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "icRnel9I",
+        "rating": 2036,
+        "ratingDiff": -5,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 f4 e6 Nc3 d5 Nf3 Nc6 exd5 exd5 d4 g6 Be3 cxd4 Nxd4 Bg7 Qd2 Nge7 O-O-O O-O Be2 a6 Bf3 Be6 g4 Qd7 h4 Bxg4 Bxg4 Qxg4 h5 Nxd4 Bxd4 Nc6 Bxg7 Kxg7 hxg6 fxg6 f5 Rxf5 Qh6+ Kf6 Nxd5+ Rxd5 Rxd5 Re8 Rf1+ Ke6 Rdd1 Ne5 Qg7 Qg5+ Kb1 Re7 Qg8+ Rf7 Rde1 Qe7 Rxf7 Qxf7 Qc8+ Qd7 Qc4+",
+        "timestamp": 1781837137276,
+        "oppN": "DEMOCHIS_29",
+        "oppR": 2037,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "ibyzEgp7",
+        "rating": 2042,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 e6 e3 c5 c4 Be7 Nc3 cxd4 exd4 O-O b3 Nc6 Bb2 d5 Be2 a6 O-O dxc4 Bxc4 h6 Be2 Nb4 Re1 Nbd5 Nxd5 Nxd5 Rc1 Bf6 Bc4 Bd7 Bxd5 exd5 Qd2 Bg4 Ne5 Be6 h3 Rc8 Nd3 Rxc1 Rxc1 Re8 Re1 Bf5 Ne5 Qb6 Nf3 Rxe1+ Nxe1 Be4 Nc2 Bxc2 Qxc2 Bxd4 Qc8+ Kh7 Qf5+ Kg8 Qc8+ Kh7 Qf5+ Kg8 Bxd4 Qxd4 Qc8+ Kh7 Qf5+ Kg8 Qc8+ Kh7 Qxb7 Qd1+ Kh2 Qd4 f3 Qf4+ Kh1 d4 Qe4+ Qxe4 fxe4 d3 Kg1 d2 Kf2 d1=Q Ke3 Qd6 Kf3 f5 Ke3 Qe5 Kf3 Qxe4+ Kf2 g5 Kg1 f4 Kh2 Qe3 Kh1 Qg3 Kg1 h5 Kf1 f3 gxf3 Qxf3+ Kg1 Qxh3 Kf2 g4 Kg1 Qf3 Kh2 g3+ Kh3 Qg4+ Kg2 h4 a4 h3+ Kh1 Qe2 b4 Qg2#",
+        "timestamp": 1781836989924,
+        "oppN": "KV_Post",
+        "oppR": 2059,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "RPulF3rG",
         "rating": 2047,
@@ -209099,7 +209234,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1781837306115,
+    "lastUpdated": 1781880273170,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -212388,7 +212523,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1781837378655,
+    "lastUpdated": 1781880345723,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -238919,7 +239054,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1781837483790,
+    "lastUpdated": 1781880450479,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -277203,7 +277338,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1781837590099,
+    "lastUpdated": 1781880557474,
     "games": [
       {
         "id": "zWtVNgP0",
