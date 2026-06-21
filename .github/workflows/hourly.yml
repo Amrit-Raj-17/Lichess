@@ -1,0 +1,30 @@
+name: Lichess Sync
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Fetch games
+        run: node scripts/fetchAllGames.js
+
+      - name: Fetch profiles
+        run: node scripts/fetchAllProfiles.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "Hourly update" || echo "No changes"
+          git push
