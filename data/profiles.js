@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1782370214914,
+    "lastUpdated": 1782382453052,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -19,10 +19,10 @@ const profiles = {
           "prog": -6
         },
         "blitz": {
-          "games": 2434,
-          "rating": 1845,
-          "rd": 72,
-          "prog": 3
+          "games": 2437,
+          "rating": 1801,
+          "rd": 68,
+          "prog": -48
         },
         "rapid": {
           "games": 603,
@@ -128,17 +128,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1782369350051,
+      "seenAt": 1782373247411,
       "playTime": {
-        "total": 3333106,
+        "total": 3334355,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14193,
-        "rated": 11422,
+        "all": 14196,
+        "rated": 11425,
         "draw": 573,
-        "loss": 5465,
+        "loss": 5468,
         "win": 8155,
         "bookmark": 26,
         "playing": 0,
@@ -148,7 +148,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1782370215065,
+    "lastUpdated": 1782382453159,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -217,7 +217,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1782370215250,
+    "lastUpdated": 1782382453271,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -346,7 +346,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1782370215402,
+    "lastUpdated": 1782382453378,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -455,7 +455,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1782370215553,
+    "lastUpdated": 1782382453486,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
