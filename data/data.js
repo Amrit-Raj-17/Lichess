@@ -1,7 +1,97 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1782824594591,
+    "lastUpdated": 1782836131242,
     "games": [
+      {
+        "id": "74ZGoxRm",
+        "rating": 1809,
+        "ratingDiff": 3,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 e6 e3 d5 c4 Be7 Nc3 O-O cxd5 exd5 Be2 c6 O-O Be6 h3 h6 b3 Nbd7 Bb2 c5 Re1 cxd4 exd4 Rc8 Bf1 Re8 Rc1 Bb4 Bb5 Qa5 Bxd7 Nxd7 Qd3 Nf6 Red1 Rc7 a4 Rec8 Na2 Rxc1 Rxc1 Rxc1+ Bxc1 Bd6 Bd2 Qb6 Qc3 Ne4 Qc2 Nxd2 Nxd2 Qd8 Nf3 Qf6 Nc1 Bxh3 Ne2 Bg4 Ne5 Bxe5 dxe5 Qxe5 Ng3 a5 Qd2 Be6 Qxa5 Qa1+ Kh2 Qb2 Qa8+ Kh7 Qxb7 Qxb3 Qxb3",
+        "timestamp": 1782825851173,
+        "oppN": "TheEternalFool",
+        "oppR": 1516,
+        "type": "blitz",
+        "clock": "3+0"
+      },
+      {
+        "id": "LFOWqOP8",
+        "rating": 2064,
+        "ratingDiff": 1,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 d5 e3 Bg4 c4 e6 Nc3 c6 cxd5 cxd5 Bb5+ Nbd7 Bd3 a6 h3 Bh5 Qb3 Rb8 Ne5 Bd6 Nxd7 Qxd7 Bxa6 bxa6 Qc2 Bg6 Qd2 O-O b3 Bb4 Bb2 Rfc8 Qe2 Bxc3+ Bxc3 Rxc3 O-O Rcc8 Rfd1 Ne4 Qf3 Nc3 Rdc1 Ne4 Qe2 Rxc1+ Rxc1 Qd6 f3 Nf6 Qd2 h6 Rc5 Qd7 Qa5 Qb7 Rc7 Qb6 Qc3 Ne8 Rc8 Rxc8 Qxc8 Qc6 Qxc6 Kh7 Qxe8 f5 Qc6 a5 Qxe6",
+        "timestamp": 1782825701468,
+        "oppN": "TheEternalFool",
+        "oppR": 1544,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "3b7p13L7",
+        "rating": 2064,
+        "ratingDiff": 0,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "Nf3 d5 d4 Nf6 c4 c6 Nc3 Bf5 e3 e6 cxd5 cxd5 Bb5+ Nbd7 Bd3 Bxd3 Qxd3 a6 O-O Bd6 a3 O-O Bd2 Re8 Ne2 e5 dxe5 Nxe5 Nxe5 Bxe5 Bc3 Bxc3 Nxc3 Rc8 Rfd1 Qb6 Nxd5 Nxd5 Qxd5 Qxb2 a4 Qb6 Rab1 Qe6 Qxe6 Rxe6 Rxb7 Rec6 h3 Rc4 a5 h6 Rdd7 Rc1+ Kh2 Ra1 Rxf7 Rxa5 Rxg7+ Kf8 Rbf7+ Ke8 Ra7 Ra1 Rg8#",
+        "timestamp": 1782825554252,
+        "oppN": "TheEternalFool",
+        "oppR": 1560,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "rhjdbLtC",
+        "rating": 2063,
+        "ratingDiff": 1,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "e4 c6 d4 e6 Nc3 d5 e5 c5 Be3 cxd4 Bxd4 Nc6 Be3 a6 Nf3 Bb4 Bd2 Bxc3 Bxc3 Nge7 Bd3 Ng6 O-O O-O Re1 b5 a3 Bb7 Qe2 Rc8 Nd4 Ncxe5 Nxb5 Nxd3 Qxd3 axb5 Qxb5 Ba8 Qb4 Qc7 Qd4 f6 Rxe6 Qc4 Qg4 d4 Bd2 f5 Qe2 Qd5 Re7 Qxg2#",
+        "timestamp": 1782825440676,
+        "oppN": "TheEternalFool",
+        "oppR": 1584,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "yNCDIoQa",
+        "rating": 2071,
+        "ratingDiff": -8,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 d5 e3 c6 c4 Bg4 Nc3 e6 cxd5 cxd5 Be2 Nc6 O-O a6 a4 Be7 h3 Bh5 b3 O-O Bb2 Rc8 Rc1 Bg6 Re1 Bd6 Bd3 Bxd3 Qxd3 Nb4 e4 Nxd3 exd5 Nxe1 Rxe1 exd5 Ba1 Bb4 Rc1 Ne4 g3 Nxc3 Bxc3 Rxc3 Rb1 Qc7 Kg2 Rc1 Rxc1 Qxc1 Ne5 Bc3 Nd7 Rc8 Nc5 Bxd4 Nxb7 Qc2 h4 Qxf2+ Kh3 Qf5+ g4 Qf3+ Kh2 Rc2#",
+        "timestamp": 1782825318808,
+        "oppN": "TheEternalFool",
+        "oppR": 1164,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "0F5BgTWU",
+        "rating": 2071,
+        "ratingDiff": 0,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "e4 c5 Nf3 e6 d4 d5 exd5 exd5 Nc3 Nf6 Be3 cxd4 Nxd4 Nc6 Nxc6 bxc6 Be2 Bf5 O-O Bb4 Na4 O-O Bc5 Bxc5 Nxc5 Qb6 Nd3 Bxd3 Bxd3 Qxb2 Re1 Rfe8 Qf3 Rxe1+ Rxe1 Qxa2 c4 Qa5 Qe2 dxc4 Be4 Nxe4 Qxe4 Rf8 Qxc6 Qxe1#",
+        "timestamp": 1782825195585,
+        "oppN": "TheEternalFool",
+        "oppR": 1167,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "PVv1cNkZ",
         "rating": 2071,
@@ -211139,7 +211229,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1782824602853,
+    "lastUpdated": 1782836139613,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -214428,7 +214518,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1782824611113,
+    "lastUpdated": 1782836147994,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -240959,7 +241049,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1782824619385,
+    "lastUpdated": 1782836156374,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -279243,7 +279333,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1782824627655,
+    "lastUpdated": 1782836164765,
     "games": [
       {
         "id": "zWtVNgP0",
