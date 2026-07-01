@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1782892969755,
+    "lastUpdated": 1782906800047,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7484,
-          "rating": 2065,
+          "games": 7490,
+          "rating": 2100,
           "rd": 45,
-          "prog": -17
+          "prog": 29
         },
         "blitz": {
           "games": 2455,
@@ -128,18 +128,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1782892669885,
+      "seenAt": 1782906604175,
       "playTime": {
-        "total": 3347035,
+        "total": 3347549,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14276,
-        "rated": 11489,
+        "all": 14282,
+        "rated": 11495,
         "draw": 578,
         "loss": 5492,
-        "win": 8206,
+        "win": 8212,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -148,7 +148,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1782892969847,
+    "lastUpdated": 1782906800203,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -217,7 +217,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1782892969938,
+    "lastUpdated": 1782906800359,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -346,7 +346,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1782892970029,
+    "lastUpdated": 1782906800515,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -455,7 +455,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1782892970121,
+    "lastUpdated": 1782906800670,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
