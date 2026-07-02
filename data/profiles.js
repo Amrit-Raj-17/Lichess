@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1783013190203,
+    "lastUpdated": 1783019336907,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7502,
-          "rating": 2102,
+          "games": 7505,
+          "rating": 2085,
           "rd": 45,
-          "prog": -3
+          "prog": -8
         },
         "blitz": {
           "games": 2455,
@@ -128,17 +128,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1783009550325,
+      "seenAt": 1783017991017,
       "playTime": {
-        "total": 3350064,
+        "total": 3350369,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14301,
-        "rated": 11507,
+        "all": 14304,
+        "rated": 11510,
         "draw": 580,
-        "loss": 5502,
+        "loss": 5505,
         "win": 8219,
         "bookmark": 26,
         "playing": 0,
@@ -148,7 +148,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1783013190295,
+    "lastUpdated": 1783019337053,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -217,7 +217,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1783013190385,
+    "lastUpdated": 1783019337200,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -346,7 +346,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1783013190475,
+    "lastUpdated": 1783019337344,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -455,7 +455,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1783013190564,
+    "lastUpdated": 1783019337490,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -491,7 +491,7 @@ const profiles = {
         "classical": {
           "games": 239,
           "rating": 2016,
-          "rd": 295,
+          "rd": 296,
           "prog": 103,
           "prov": true
         },
