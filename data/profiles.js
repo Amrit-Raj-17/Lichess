@@ -1,6 +1,222 @@
 const profiles = {
+  "Heal_Potion": {
+    "lastUpdated": 1783459070554,
+    "profile": {
+      "id": "heal_potion",
+      "username": "Heal_Potion",
+      "perfs": {
+        "ultraBullet": {
+          "games": 363,
+          "rating": 1455,
+          "rd": 106,
+          "prog": -6
+        },
+        "bullet": {
+          "games": 7529,
+          "rating": 2084,
+          "rd": 46,
+          "prog": -20
+        },
+        "blitz": {
+          "games": 2457,
+          "rating": 1798,
+          "rd": 60,
+          "prog": -7
+        },
+        "rapid": {
+          "games": 603,
+          "rating": 1912,
+          "rd": 80,
+          "prog": 52
+        },
+        "classical": {
+          "games": 333,
+          "rating": 1796,
+          "rd": 109,
+          "prog": 7
+        },
+        "correspondence": {
+          "games": 99,
+          "rating": 2019,
+          "rd": 140,
+          "prog": -85,
+          "prov": true
+        },
+        "chess960": {
+          "games": 27,
+          "rating": 1664,
+          "rd": 193,
+          "prog": 168,
+          "prov": true
+        },
+        "kingOfTheHill": {
+          "games": 8,
+          "rating": 1689,
+          "rd": 248,
+          "prog": 0,
+          "prov": true
+        },
+        "threeCheck": {
+          "games": 9,
+          "rating": 1825,
+          "rd": 229,
+          "prog": 0,
+          "prov": true
+        },
+        "antichess": {
+          "games": 21,
+          "rating": 1008,
+          "rd": 219,
+          "prog": -540,
+          "prov": true
+        },
+        "atomic": {
+          "games": 15,
+          "rating": 1256,
+          "rd": 270,
+          "prog": 89,
+          "prov": true
+        },
+        "horde": {
+          "games": 29,
+          "rating": 1805,
+          "rd": 229,
+          "prog": 165,
+          "prov": true
+        },
+        "racingKings": {
+          "games": 10,
+          "rating": 1379,
+          "rd": 240,
+          "prog": 0,
+          "prov": true
+        },
+        "crazyhouse": {
+          "games": 11,
+          "rating": 1453,
+          "rd": 238,
+          "prog": 0,
+          "prov": true
+        },
+        "puzzle": {
+          "games": 257,
+          "rating": 2443,
+          "rd": 136,
+          "prog": 0,
+          "prov": true
+        },
+        "storm": {
+          "runs": 1,
+          "score": 14
+        },
+        "racer": {
+          "runs": 3,
+          "score": 21
+        },
+        "streak": {
+          "runs": 12,
+          "score": 43
+        }
+      },
+      "flair": "smileys.face-with-crossed-out-eyes-blob",
+      "createdAt": 1647113822045,
+      "profile": {
+        "flag": "IN",
+        "location": "Kolkata, West Bengal",
+        "bio": "Still Learning\r\nhttps://amrit-raj-17.github.io/Lichess/\r\nhttps://imgur.com/d8IPBKz",
+        "realName": "Amrit Raj Thakur",
+        "links": "https://amrit-raj-17.github.io/Lichess/"
+      },
+      "seenAt": 1783408179937,
+      "playTime": {
+        "total": 3355230,
+        "tv": 1595
+      },
+      "url": "https://lichess.org/@/Heal_Potion",
+      "count": {
+        "all": 14345,
+        "rated": 11538,
+        "draw": 583,
+        "loss": 5522,
+        "win": 8240,
+        "bookmark": 26,
+        "playing": 0,
+        "import": 9,
+        "me": 0
+      }
+    }
+  },
+  "blitz_slayer": {
+    "lastUpdated": 1783459070648,
+    "profile": {
+      "id": "blitz_slayer",
+      "username": "blitz_slayer",
+      "perfs": {
+        "bullet": {
+          "games": 133,
+          "rating": 2007,
+          "rd": 134,
+          "prog": 51,
+          "prov": true
+        },
+        "blitz": {
+          "games": 67,
+          "rating": 1917,
+          "rd": 176,
+          "prog": -82,
+          "prov": true
+        },
+        "rapid": {
+          "games": 18,
+          "rating": 1960,
+          "rd": 182,
+          "prog": 25,
+          "prov": true
+        },
+        "classical": {
+          "games": 0,
+          "rating": 1500,
+          "rd": 500,
+          "prog": 0,
+          "prov": true
+        },
+        "correspondence": {
+          "games": 0,
+          "rating": 1500,
+          "rd": 500,
+          "prog": 0,
+          "prov": true
+        },
+        "puzzle": {
+          "games": 5,
+          "rating": 1987,
+          "rd": 246,
+          "prog": 0,
+          "prov": true
+        }
+      },
+      "createdAt": 1728622014682,
+      "seenAt": 1776530264897,
+      "playTime": {
+        "total": 45270,
+        "tv": 0
+      },
+      "url": "https://lichess.org/@/blitz_slayer",
+      "count": {
+        "all": 219,
+        "rated": 218,
+        "draw": 7,
+        "loss": 89,
+        "win": 123,
+        "bookmark": 0,
+        "playing": 0,
+        "import": 1,
+        "me": 0
+      }
+    }
+  },
   "power_factor": {
-    "lastUpdated": 1783453218560,
+    "lastUpdated": 1783459070741,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -129,7 +345,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1783453218719,
+    "lastUpdated": 1783459070833,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -238,7 +454,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1783453218877,
+    "lastUpdated": 1783459070925,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -316,7 +532,7 @@ const profiles = {
         "atomic": {
           "games": 20,
           "rating": 1222,
-          "rd": 316,
+          "rd": 317,
           "prog": 8,
           "prov": true
         },
