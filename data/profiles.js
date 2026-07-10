@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1783674111704,
+    "lastUpdated": 1783685987820,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -24,10 +24,10 @@ const profiles = {
           "prog": -7
         },
         "rapid": {
-          "games": 603,
-          "rating": 1912,
-          "rd": 81,
-          "prog": 52
+          "games": 604,
+          "rating": 1895,
+          "rd": 79,
+          "prog": 21
         },
         "classical": {
           "games": 333,
@@ -127,17 +127,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1783665943483,
+      "seenAt": 1783676891206,
       "playTime": {
-        "total": 3357075,
+        "total": 3357631,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14356,
-        "rated": 11546,
+        "all": 14357,
+        "rated": 11547,
         "draw": 584,
-        "loss": 5528,
+        "loss": 5529,
         "win": 8244,
         "bookmark": 26,
         "playing": 0,
@@ -147,7 +147,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1783674111824,
+    "lastUpdated": 1783685987911,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -216,7 +216,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1783674111945,
+    "lastUpdated": 1783685988003,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -345,7 +345,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1783674112065,
+    "lastUpdated": 1783685988094,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -454,7 +454,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1783674112185,
+    "lastUpdated": 1783685988185,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
