@@ -1,7 +1,37 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1783770212611,
+    "lastUpdated": 1783774461624,
     "games": [
+      {
+        "id": "9L4gmasu",
+        "rating": 1798,
+        "ratingDiff": -12,
+        "result": "loss",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 c5 c4 e6 Nc3 Nc6 cxd5 Nxd5 dxc5 Bxc5 Nxd5 Qxd5 Qxd5 exd5 Bb5 a6 Ba4 O-O O-O b5 Bb3 Be6 Bd2 Bb4 Bxb4 Nxb4 Rfd1 Rfd8 Nd4 Rac8 a3 Nc6 Nxc6 Rxc6 Rac1 Rdc8 Rxc6 Rxc6 h3 Rd6 e4 d4 Bxe6 fxe6 f4 Kf7 Kf2 Kf6 g4 e5 fxe5+ Kxe5 Kf3 Rf6+ Kg3 Rf4 Rc1 Rxe4 Rc5+ Kd6 Rc8 Kd7 Rg8 d3 Rxg7+ Kd6 Rf7 d2 Rf1 Re1",
+        "timestamp": 1783772424329,
+        "oppN": "sokootian",
+        "oppR": 1761,
+        "type": "blitz",
+        "clock": "1+10"
+      },
+      {
+        "id": "Fmcy0aGO",
+        "rating": 1796,
+        "ratingDiff": 25,
+        "result": "win",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "e4 c5 Nc3 e6 Nf3 d5 exd5 exd5 d4 cxd4 Qxd4 Nf6 Bg5 Nc6 Bb5 Be7 Bxf6 Bxf6 Qxd5 Bxc3+ Kd1 Qxd5+ Bd3 Bxb2 Rb1 Ne5 Nxe5 Bxe5 Re1 O-O Rb5 Bg4+ f3 Bxf3+ gxf3 Qxf3+ Be2 Qf4 Bd3 Bc3 Rf5 Qd2#",
+        "timestamp": 1783771608190,
+        "oppN": "Fisher_g22",
+        "oppR": 1730,
+        "type": "classical",
+        "clock": "25+0"
+      },
       {
         "id": "4t8B382i",
         "rating": 2077,
@@ -212541,7 +212571,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1783770221010,
+    "lastUpdated": 1783774501882,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -215830,7 +215860,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1783770229401,
+    "lastUpdated": 1783774542147,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -242361,7 +242391,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1783770237782,
+    "lastUpdated": 1783774582417,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -280645,7 +280675,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1783770246172,
+    "lastUpdated": 1783774622678,
     "games": [
       {
         "id": "zWtVNgP0",
