@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1784476096183,
+    "lastUpdated": 1784479437819,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -12,10 +12,10 @@ const profiles = {
           "prog": -6
         },
         "bullet": {
-          "games": 7554,
+          "games": 7556,
           "rating": 2055,
-          "rd": 46,
-          "prog": -8
+          "rd": 45,
+          "prog": -9
         },
         "blitz": {
           "games": 2458,
@@ -127,18 +127,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1784460550210,
+      "seenAt": 1784478519713,
       "playTime": {
-        "total": 3365414,
+        "total": 3365609,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14381,
-        "rated": 11569,
+        "all": 14383,
+        "rated": 11571,
         "draw": 585,
-        "loss": 5542,
-        "win": 8254,
+        "loss": 5543,
+        "win": 8255,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -147,7 +147,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1784476096329,
+    "lastUpdated": 1784479437964,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -216,7 +216,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1784476096489,
+    "lastUpdated": 1784479438110,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -345,7 +345,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1784476096634,
+    "lastUpdated": 1784479438254,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -454,7 +454,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1784476096779,
+    "lastUpdated": 1784479438400,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
