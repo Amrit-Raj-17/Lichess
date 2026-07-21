@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1784619125372,
+    "lastUpdated": 1784628901264,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -127,7 +127,7 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1784567735041,
+      "seenAt": 1784619214417,
       "playTime": {
         "total": 3365757,
         "tv": 1595
@@ -147,7 +147,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1784619125524,
+    "lastUpdated": 1784628901416,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -216,7 +216,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1784619125676,
+    "lastUpdated": 1784628901568,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -315,7 +315,7 @@ const profiles = {
         "puzzle": {
           "games": 4,
           "rating": 1965,
-          "rd": 308,
+          "rd": 309,
           "prog": 0,
           "prov": true
         }
@@ -345,7 +345,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1784619125827,
+    "lastUpdated": 1784628901720,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -454,7 +454,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1784619125980,
+    "lastUpdated": 1784628901872,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
