@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1784977494882,
+    "lastUpdated": 1784984401117,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -25,10 +25,10 @@ const profiles = {
           "prog": -27
         },
         "rapid": {
-          "games": 607,
-          "rating": 1863,
-          "rd": 79,
-          "prog": -22
+          "games": 609,
+          "rating": 1877,
+          "rd": 76,
+          "prog": -6
         },
         "classical": {
           "games": 334,
@@ -44,10 +44,10 @@ const profiles = {
           "prov": true
         },
         "chess960": {
-          "games": 27,
-          "rating": 1664,
-          "rd": 195,
-          "prog": 168,
+          "games": 28,
+          "rating": 1736,
+          "rd": 171,
+          "prog": 179,
           "prov": true
         },
         "kingOfTheHill": {
@@ -128,18 +128,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1784881371326,
+      "seenAt": 1784981788275,
       "playTime": {
-        "total": 3367109,
+        "total": 3370730,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14394,
-        "rated": 11582,
+        "all": 14397,
+        "rated": 11585,
         "draw": 585,
         "loss": 5550,
-        "win": 8259,
+        "win": 8262,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -148,7 +148,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1784977494987,
+    "lastUpdated": 1784984401268,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -217,7 +217,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1784977495093,
+    "lastUpdated": 1784984401419,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -346,7 +346,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1784977495198,
+    "lastUpdated": 1784984401570,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -455,7 +455,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1784977495305,
+    "lastUpdated": 1784984401720,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
