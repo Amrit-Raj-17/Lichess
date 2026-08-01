@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1785561477269,
+    "lastUpdated": 1785571375405,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7599,
-          "rating": 2011,
+          "games": 7600,
+          "rating": 2016,
           "rd": 45,
-          "prog": -32
+          "prog": -22
         },
         "blitz": {
           "games": 2458,
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/"
       },
-      "seenAt": 1785513192732,
+      "seenAt": 1785565641191,
       "playTime": {
-        "total": 3375937,
+        "total": 3376067,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14431,
-        "rated": 11617,
+        "all": 14432,
+        "rated": 11618,
         "draw": 586,
         "loss": 5569,
-        "win": 8276,
+        "win": 8277,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1785561477397,
+    "lastUpdated": 1785571375551,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1785561477525,
+    "lastUpdated": 1785571375696,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1785561477653,
+    "lastUpdated": 1785571375841,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1785561477780,
+    "lastUpdated": 1785571375987,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
