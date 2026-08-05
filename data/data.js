@@ -1,7 +1,37 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1785915143477,
+    "lastUpdated": 1785925473153,
     "games": [
+      {
+        "id": "BBkyJzdu",
+        "rating": 1803,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 Nf3 e6 c3 d5 exd5 exd5 d4 Nc6 Be3 Nf6 dxc5 Bg4 Be2 Be7 O-O Ne4 h3 Bh5 Nbd2 O-O c4 Nxd2 Qxd2 Bxf3 Bxf3 dxc4 Qxd8 Rfxd8 Be2 Ne5 Rac1 Nd3 Bxd3 cxd3 Rfd1 h6 Rc3 Rac8 Rcxd3 Rxd3 Rxd3 Bxc5 Bxc5 Rxc5 Rd8+ Kh7 Rd7 Rb5 Rd2 a5 Kf1 Kg6 Ke2 f6 Ke3 Kf5 g3 g5 Kd3 Rd5+ Kc3 Rxd2 Kxd2 Ke4 Ke2 b5 f3+ Kd4 Kd2 f5 Ke2 h5 h4 gxh4 gxh4 f4 Kd2 Kc4 Ke2 Kd4 Kd2 a4 Ke2 b4 Kd2 a3 bxa3 bxa3",
+        "timestamp": 1785919610235,
+        "oppN": "TheEternalFool",
+        "oppR": 1543,
+        "type": "blitz",
+        "clock": "3+0"
+      },
+      {
+        "id": "KxNmmTCH",
+        "rating": 2003,
+        "ratingDiff": -7,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 e5 dxe5 Ng4 e3 Nc6 b3 Ngxe5 Bb2 Nxf3+ Qxf3 d5 Bd3 Be6 Nc3 Qf6 Qxf6 gxf6 Nb5 O-O-O Bxf6 Bc5 Bxh8 Rxh8 O-O-O a6 Nc3 Rg8 g3 d4 exd4 Nxd4 Ne4 Be7 Rhe1 Nf3 Re3 Nxh2 Bc4 Bf5 Nc3 Bc5 Re5 Bg6 Rxc5 Nf3 Nd5 c6 Nb6+ Kc7 Na4 Re8 Ra5 b5 Rxb5 axb5 Bxb5 cxb5 Nc5 Re1 Nd3 Rxd1+ Kxd1 Ne5 Ke2 Nxd3 Ke3 f6 cxd3 f5",
+        "timestamp": 1785918060144,
+        "oppN": "ProfChaos23",
+        "oppR": 1983,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "IVCknFoC",
         "rating": 2009,
@@ -213782,7 +213812,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1785915183760,
+    "lastUpdated": 1785925513406,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -217071,7 +217101,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1785915224028,
+    "lastUpdated": 1785925553657,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -243602,7 +243632,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1785915264302,
+    "lastUpdated": 1785925593907,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -281886,7 +281916,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1785915304558,
+    "lastUpdated": 1785925634147,
     "games": [
       {
         "id": "zWtVNgP0",
