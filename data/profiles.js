@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1786177829899,
+    "lastUpdated": 1786181420145,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -127,9 +127,9 @@ const profiles = {
         "location": "Kolkata, West Bengal",
         "bio": "Still Learning\r\nhttps://amrit-raj-17.github.io/Lichess/\r\nhttps://imgur.com/d8IPBKz",
         "realName": "Amrit Raj Thakur",
-        "links": "https://amrit-raj-17.github.io/Lichess/"
+        "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1786177111342,
+      "seenAt": 1786178431075,
       "playTime": {
         "total": 3388954,
         "tv": 1595
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1786177830047,
+    "lastUpdated": 1786181420236,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1786177830195,
+    "lastUpdated": 1786181420329,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1786177830342,
+    "lastUpdated": 1786181420420,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1786177830489,
+    "lastUpdated": 1786181420511,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
