@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1787128003613,
+    "lastUpdated": 1787131390538,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -47,7 +47,7 @@ const profiles = {
         "chess960": {
           "games": 28,
           "rating": 1736,
-          "rd": 174,
+          "rd": 175,
           "prog": 179,
           "prov": true
         },
@@ -129,28 +129,27 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1787127948155,
+      "seenAt": 1787130767860,
       "playTime": {
-        "total": 3399517,
+        "total": 3399839,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
-      "playing": "https://lichess.org/mYS75WfB/black",
       "count": {
-        "all": 14543,
+        "all": 14544,
         "rated": 11711,
         "draw": 587,
         "loss": 5608,
-        "win": 8348,
+        "win": 8349,
         "bookmark": 26,
-        "playing": 1,
+        "playing": 0,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1787128003705,
+    "lastUpdated": 1787131390693,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -219,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1787128003797,
+    "lastUpdated": 1787131390848,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -348,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1787128003888,
+    "lastUpdated": 1787131391004,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -457,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1787128003979,
+    "lastUpdated": 1787131391158,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
