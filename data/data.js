@@ -1,7 +1,22 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1787390257890,
+    "lastUpdated": 1787393542046,
     "games": [
+      {
+        "id": "8YX0AkuW",
+        "rating": 2050,
+        "ratingDiff": -5,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 c5 d4 e6 d5 exd5 Qxd5 d6 Nc3 Nf6 Qd3 Nc6 Bg5 Be7 O-O-O Nb4 Qg3 Be6 e5 Nfd5 Bxe7 Qxe7 Nxd5 Nxd5 exd6 Qf6 Bb5+ Kd8 Kb1 a6 Bc4 Nf4 Bxe6 Nxe6 d7 Qf4 Qb3 b5 Nf3 Qb4 Qd5 Ra7 Ne5 Rf8 Nc6+ Kc7 Nxb4 cxb4 Qd6+ Kb7 Qxf8 Kc6 d8=Q Nxd8 Qd6+ Kb7 Qxd8",
+        "timestamp": 1787391812726,
+        "oppN": "IfromSarapul",
+        "oppR": 2031,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "CyCmN81t",
         "rating": 2055,
@@ -215525,7 +215540,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1787390297979,
+    "lastUpdated": 1787393550305,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -218814,7 +218829,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1787390338070,
+    "lastUpdated": 1787393558602,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -245345,7 +245360,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1787390378160,
+    "lastUpdated": 1787393566908,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -283629,7 +283644,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1787390418250,
+    "lastUpdated": 1787393575177,
     "games": [
       {
         "id": "zWtVNgP0",
