@@ -1,7 +1,37 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1788014850476,
+    "lastUpdated": 1788026425644,
     "games": [
+      {
+        "id": "COxQM7vv",
+        "rating": 1896,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nc6 e3 b6 c4 Nf6 Nc3 e6 cxd5 exd5 Bb5 Bb7 Qa4 Qd6 Ne5 Nd7 Nxc6 Bxc6 Bxc6 Rb8 Nxd5 b5 Bxd7+ Qxd7 Qb3 a5 Nf4 c5 dxc5 Bxc5 Bd2 a4 Qc3 Rc8 O-O Bxe3 Qxe3+",
+        "timestamp": 1788015605679,
+        "oppN": "Manish_Verma30",
+        "oppR": 1534,
+        "type": "rapid",
+        "clock": "8+2"
+      },
+      {
+        "id": "zhkLZnRE",
+        "rating": 1891,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "black",
+        "moves": "e4 c5 Nf3 e6 Bc4 d5 exd5 exd5 Bb5+ Nc6 O-O Nf6 Re1+ Be7 d3 O-O Nc3 Be6 Bxc6 bxc6 b3 a5 Bb2 c4 Nd4 Qd7 Re3 cxd3 Qxd3 Bc5 Rae1 Rfe8 Na4 Bxd4 Bxd4 Bf5 Nc5 Bxd3 Nxd7 Rxe3 Nxf6+ gxf6 Rxe3 Bxc2 Bxf6 a4 Rc3 axb3 Rg3+ Bg6 Rxb3 Rc8 a3 c5 h3 c4 Rb5 c3 Bg5 d4 Kf1 d3 Ke1 c2 Bc1 Re8+ Kf1 d2 Bxd2 Bd3+ Kg1 Bxb5",
+        "timestamp": 1788014772913,
+        "oppN": "Manish_Verma30",
+        "oppR": 1537,
+        "type": "rapid",
+        "clock": "8+2"
+      },
       {
         "id": "1gUJwbrd",
         "rating": 1886,
@@ -216070,7 +216100,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1788014859036,
+    "lastUpdated": 1788026465894,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -219359,7 +219389,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1788014867417,
+    "lastUpdated": 1788026506135,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -245890,7 +245920,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1788014875786,
+    "lastUpdated": 1788026548187,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -284174,7 +284204,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1788014884167,
+    "lastUpdated": 1788026588435,
     "games": [
       {
         "id": "zWtVNgP0",
