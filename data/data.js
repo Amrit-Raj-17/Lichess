@@ -1,7 +1,22 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1788758747395,
+    "lastUpdated": 1788778798545,
     "games": [
+      {
+        "id": "cqtQiRxi",
+        "rating": 1973,
+        "ratingDiff": -10,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "black",
+        "moves": "d4 d5 e4 dxe4 Nc3 Nf6 Bg5 c5 dxc5 Qxd1+ Rxd1 e6 Nxe4 Nxe4 Rd8#",
+        "timestamp": 1788773500354,
+        "oppN": "chessplayerBY",
+        "oppR": 1690,
+        "type": "bullet",
+        "clock": "1+2"
+      },
       {
         "id": "BtTafYSy",
         "rating": 1967,
@@ -216572,7 +216587,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1788758755687,
+    "lastUpdated": 1788778838633,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -219861,7 +219876,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1788758763992,
+    "lastUpdated": 1788778878724,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -246392,7 +246407,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1788758772281,
+    "lastUpdated": 1788778925213,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -284676,7 +284691,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1788758780578,
+    "lastUpdated": 1788778965294,
     "games": [
       {
         "id": "zWtVNgP0",
