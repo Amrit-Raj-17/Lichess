@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1789005791808,
+    "lastUpdated": 1789024178586,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -8,15 +8,15 @@ const profiles = {
         "ultraBullet": {
           "games": 364,
           "rating": 1417,
-          "rd": 115,
+          "rd": 116,
           "prog": -10,
           "prov": true
         },
         "bullet": {
-          "games": 7758,
-          "rating": 2004,
+          "games": 7760,
+          "rating": 2005,
           "rd": 45,
-          "prog": 31
+          "prog": 33
         },
         "blitz": {
           "games": 2478,
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1788981346766,
+      "seenAt": 1789019525908,
       "playTime": {
-        "total": 3420688,
+        "total": 3420978,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14661,
-        "rated": 11802,
+        "all": 14663,
+        "rated": 11804,
         "draw": 593,
-        "loss": 5657,
-        "win": 8411,
+        "loss": 5658,
+        "win": 8412,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1789005791925,
+    "lastUpdated": 1789024178702,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1789005792044,
+    "lastUpdated": 1789024178817,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1789005792160,
+    "lastUpdated": 1789024178934,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -355,7 +355,7 @@ const profiles = {
         "ultraBullet": {
           "games": 21,
           "rating": 1404,
-          "rd": 251,
+          "rd": 252,
           "prog": 95,
           "prov": true
         },
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1789005792276,
+    "lastUpdated": 1789024179049,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
