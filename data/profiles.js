@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1789264704668,
+    "lastUpdated": 1789283296439,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1789264704785,
+    "lastUpdated": 1789283296588,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1789264704903,
+    "lastUpdated": 1789283296736,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1789264705020,
+    "lastUpdated": 1789283296884,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -383,7 +383,7 @@ const profiles = {
         "classical": {
           "games": 95,
           "rating": 1742,
-          "rd": 227,
+          "rd": 228,
           "prog": 2,
           "prov": true
         },
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1789264705137,
+    "lastUpdated": 1789283297031,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
