@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1789778953925,
+    "lastUpdated": 1789795145357,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -8,7 +8,7 @@ const profiles = {
         "ultraBullet": {
           "games": 364,
           "rating": 1417,
-          "rd": 117,
+          "rd": 118,
           "prog": -10,
           "prov": true
         },
@@ -96,14 +96,14 @@ const profiles = {
         "crazyhouse": {
           "games": 11,
           "rating": 1453,
-          "rd": 245,
+          "rd": 246,
           "prog": 0,
           "prov": true
         },
         "puzzle": {
           "games": 257,
           "rating": 2443,
-          "rd": 149,
+          "rd": 150,
           "prog": 0,
           "prov": true
         },
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1789778954073,
+    "lastUpdated": 1789795145509,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1789778954223,
+    "lastUpdated": 1789795145663,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1789778954371,
+    "lastUpdated": 1789795145853,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1789778954520,
+    "lastUpdated": 1789795146005,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -534,7 +534,7 @@ const profiles = {
         "atomic": {
           "games": 20,
           "rating": 1222,
-          "rd": 322,
+          "rd": 323,
           "prog": 8,
           "prov": true
         },
@@ -555,7 +555,7 @@ const profiles = {
         "crazyhouse": {
           "games": 8,
           "rating": 1455,
-          "rd": 342,
+          "rd": 343,
           "prog": 0,
           "prov": true
         },
