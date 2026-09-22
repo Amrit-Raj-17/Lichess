@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1790055517931,
+    "lastUpdated": 1790073161204,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -19,9 +19,9 @@ const profiles = {
           "prog": 16
         },
         "blitz": {
-          "games": 2480,
-          "rating": 1812,
-          "rd": 69,
+          "games": 2481,
+          "rating": 1800,
+          "rd": 68,
           "prog": -4
         },
         "rapid": {
@@ -47,7 +47,7 @@ const profiles = {
         "chess960": {
           "games": 28,
           "rating": 1736,
-          "rd": 179,
+          "rd": 180,
           "prog": 179,
           "prov": true
         },
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1790042556416,
+      "seenAt": 1790064781674,
       "playTime": {
-        "total": 3436835,
+        "total": 3437189,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14750,
-        "rated": 11863,
+        "all": 14751,
+        "rated": 11864,
         "draw": 597,
-        "loss": 5690,
+        "loss": 5691,
         "win": 8463,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1790055518046,
+    "lastUpdated": 1790073161295,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1790055518161,
+    "lastUpdated": 1790073161387,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1790055518275,
+    "lastUpdated": 1790073161478,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1790055518389,
+    "lastUpdated": 1790073161570,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
