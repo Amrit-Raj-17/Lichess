@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1790036570771,
+    "lastUpdated": 1790055517931,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7815,
-          "rating": 1993,
+          "games": 7816,
+          "rating": 1988,
           "rd": 45,
-          "prog": 15
+          "prog": 16
         },
         "blitz": {
           "games": 2480,
@@ -68,7 +68,7 @@ const profiles = {
         "antichess": {
           "games": 21,
           "rating": 1008,
-          "rd": 227,
+          "rd": 228,
           "prog": -540,
           "prov": true
         },
@@ -89,7 +89,7 @@ const profiles = {
         "racingKings": {
           "games": 10,
           "rating": 1379,
-          "rd": 248,
+          "rd": 249,
           "prog": 0,
           "prov": true
         },
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1790009296050,
+      "seenAt": 1790042556416,
       "playTime": {
-        "total": 3436710,
+        "total": 3436835,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14749,
-        "rated": 11862,
+        "all": 14750,
+        "rated": 11863,
         "draw": 597,
-        "loss": 5689,
+        "loss": 5690,
         "win": 8463,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1790036570863,
+    "lastUpdated": 1790055518046,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1790036570957,
+    "lastUpdated": 1790055518161,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -268,7 +268,7 @@ const profiles = {
         "chess960": {
           "games": 5,
           "rating": 1733,
-          "rd": 284,
+          "rd": 285,
           "prog": 0,
           "prov": true
         },
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1790036571049,
+    "lastUpdated": 1790055518275,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1790036571141,
+    "lastUpdated": 1790055518389,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -541,7 +541,7 @@ const profiles = {
         "horde": {
           "games": 5,
           "rating": 1531,
-          "rd": 358,
+          "rd": 359,
           "prog": 0,
           "prov": true
         },
