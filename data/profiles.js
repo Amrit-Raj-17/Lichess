@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1790841555914,
+    "lastUpdated": 1790867371801,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,8 +13,8 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7862,
-          "rating": 1986,
+          "games": 7865,
+          "rating": 1979,
           "rd": 45,
           "prog": -19
         },
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1790839676778,
+      "seenAt": 1790848232746,
       "playTime": {
-        "total": 3446876,
+        "total": 3447153,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14811,
-        "rated": 11920,
+        "all": 14814,
+        "rated": 11923,
         "draw": 599,
-        "loss": 5717,
-        "win": 8495,
+        "loss": 5719,
+        "win": 8496,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1790841556065,
+    "lastUpdated": 1790867371946,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1790841556211,
+    "lastUpdated": 1790867372090,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1790841556355,
+    "lastUpdated": 1790867372235,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1790841556501,
+    "lastUpdated": 1790867372380,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -534,7 +534,7 @@ const profiles = {
         "atomic": {
           "games": 20,
           "rating": 1222,
-          "rd": 323,
+          "rd": 324,
           "prog": 8,
           "prov": true
         },
