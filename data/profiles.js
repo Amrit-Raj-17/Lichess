@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1791186981153,
+    "lastUpdated": 1791218095011,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,16 +13,16 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7876,
-          "rating": 2005,
+          "games": 7881,
+          "rating": 2023,
           "rd": 45,
-          "prog": 26
+          "prog": 32
         },
         "blitz": {
-          "games": 2490,
-          "rating": 1768,
+          "games": 2491,
+          "rating": 1772,
           "rd": 66,
-          "prog": -39
+          "prog": -40
         },
         "rapid": {
           "games": 614,
@@ -33,7 +33,7 @@ const profiles = {
         "classical": {
           "games": 335,
           "rating": 1778,
-          "rd": 119,
+          "rd": 120,
           "prog": -8,
           "prov": true
         },
@@ -45,10 +45,10 @@ const profiles = {
           "prov": true
         },
         "chess960": {
-          "games": 30,
-          "rating": 1787,
-          "rd": 170,
-          "prog": 304,
+          "games": 31,
+          "rating": 1800,
+          "rd": 166,
+          "prog": 343,
           "prov": true
         },
         "kingOfTheHill": {
@@ -129,28 +129,27 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1791186743855,
+      "seenAt": 1791211302596,
       "playTime": {
-        "total": 3449136,
+        "total": 3451815,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
-      "playing": "https://lichess.org/gSV69S4P/black",
       "count": {
-        "all": 14826,
-        "rated": 11935,
+        "all": 14838,
+        "rated": 11942,
         "draw": 600,
-        "loss": 5722,
-        "win": 8504,
+        "loss": 5724,
+        "win": 8514,
         "bookmark": 26,
-        "playing": 1,
+        "playing": 0,
         "import": 9,
         "me": 0
       }
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1791186981245,
+    "lastUpdated": 1791218095159,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -219,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1791186981338,
+    "lastUpdated": 1791218095308,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -283,7 +282,7 @@ const profiles = {
         "antichess": {
           "games": 10,
           "rating": 1439,
-          "rd": 249,
+          "rd": 250,
           "prog": 0,
           "prov": true
         },
@@ -311,7 +310,7 @@ const profiles = {
         "crazyhouse": {
           "games": 1,
           "rating": 1788,
-          "rd": 366,
+          "rd": 367,
           "prog": 0,
           "prov": true
         },
@@ -348,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1791186981432,
+    "lastUpdated": 1791218095456,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -457,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1791186981525,
+    "lastUpdated": 1791218095604,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
