@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1791506921700,
+    "lastUpdated": 1791529020279,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7894,
+          "games": 7895,
           "rating": 2012,
           "rd": 45,
-          "prog": -1
+          "prog": -8
         },
         "blitz": {
           "games": 2494,
@@ -129,16 +129,16 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1791479326511,
+      "seenAt": 1791526480906,
       "playTime": {
-        "total": 3457938,
+        "total": 3458060,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14866,
-        "rated": 11959,
-        "draw": 602,
+        "all": 14867,
+        "rated": 11960,
+        "draw": 603,
         "loss": 5733,
         "win": 8531,
         "bookmark": 26,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1791506921792,
+    "lastUpdated": 1791529020430,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1791506921886,
+    "lastUpdated": 1791529020580,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1791506921978,
+    "lastUpdated": 1791529020729,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -355,7 +355,7 @@ const profiles = {
         "ultraBullet": {
           "games": 21,
           "rating": 1404,
-          "rd": 254,
+          "rd": 255,
           "prog": 95,
           "prov": true
         },
@@ -418,7 +418,7 @@ const profiles = {
         "puzzle": {
           "games": 62,
           "rating": 2133,
-          "rd": 229,
+          "rd": 230,
           "prog": 0,
           "prov": true
         },
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1791506922070,
+    "lastUpdated": 1791529020878,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
