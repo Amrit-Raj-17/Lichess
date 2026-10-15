@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1792046670208,
+    "lastUpdated": 1792066590808,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 7914,
-          "rating": 1990,
+          "games": 7916,
+          "rating": 1978,
           "rd": 45,
-          "prog": -5
+          "prog": -17
         },
         "blitz": {
           "games": 2497,
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1792045251489,
+      "seenAt": 1792060036717,
       "playTime": {
-        "total": 3465078,
+        "total": 3465221,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 14890,
-        "rated": 11983,
+        "all": 14892,
+        "rated": 11985,
         "draw": 605,
-        "loss": 5744,
+        "loss": 5746,
         "win": 8541,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1792046670327,
+    "lastUpdated": 1792066590912,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1792046670443,
+    "lastUpdated": 1792066591016,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1792046670560,
+    "lastUpdated": 1792066591119,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1792046670681,
+    "lastUpdated": 1792066591225,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -555,7 +555,7 @@ const profiles = {
         "crazyhouse": {
           "games": 8,
           "rating": 1455,
-          "rd": 344,
+          "rd": 345,
           "prog": 0,
           "prov": true
         },
