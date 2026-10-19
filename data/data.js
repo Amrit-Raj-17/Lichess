@@ -1,6 +1,6 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1792360885354,
+    "lastUpdated": 1792370149089,
     "games": [
       {
         "id": "IIr1itBp",
@@ -220559,7 +220559,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1792360893474,
+    "lastUpdated": 1792370189499,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -223848,7 +223848,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1792360901866,
+    "lastUpdated": 1792370229511,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -250379,7 +250379,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1792360910255,
+    "lastUpdated": 1792370269520,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -288663,7 +288663,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1792360919215,
+    "lastUpdated": 1792370309541,
     "games": [
       {
         "id": "zWtVNgP0",
