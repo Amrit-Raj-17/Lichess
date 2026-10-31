@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1793409221336,
+    "lastUpdated": 1793432718788,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -13,10 +13,10 @@ const profiles = {
           "prov": true
         },
         "bullet": {
-          "games": 8015,
-          "rating": 1961,
+          "games": 8022,
+          "rating": 1943,
           "rd": 45,
-          "prog": 1
+          "prog": -29
         },
         "blitz": {
           "games": 2513,
@@ -129,18 +129,18 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1793372314009,
+      "seenAt": 1793431138904,
       "playTime": {
-        "total": 3493589,
+        "total": 3494417,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 15022,
-        "rated": 12110,
+        "all": 15029,
+        "rated": 12117,
         "draw": 615,
-        "loss": 5806,
-        "win": 8601,
+        "loss": 5811,
+        "win": 8603,
         "bookmark": 26,
         "playing": 0,
         "import": 9,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1793409221468,
+    "lastUpdated": 1793432718903,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1793409221596,
+    "lastUpdated": 1793432719018,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1793409221740,
+    "lastUpdated": 1793432719148,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1793409221872,
+    "lastUpdated": 1793432719258,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -520,7 +520,7 @@ const profiles = {
         "threeCheck": {
           "games": 4,
           "rating": 1306,
-          "rd": 366,
+          "rd": 367,
           "prog": 0,
           "prov": true
         },
