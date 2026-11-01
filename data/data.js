@@ -1,7 +1,52 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1793521309449,
+    "lastUpdated": 1793547228540,
     "games": [
+      {
+        "id": "5uesG7u0",
+        "rating": 1953,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "black",
+        "moves": "c4 c5 d4 cxd4 Qxd4 e6 Qd1 d5 e3 Nc6 c5 Bxc5 Nf3 Nf6 Be2 O-O O-O Bb6 Nbd2 Bd7 a3 Rc8 b4 a6 Bb2 Na7 Nd4 Nb5 Nxb5 Bxb5 Bxb5 axb5 Nf3 Qd7 Nd4 Bxd4 Bxd4 Rfd8 Qe2 Ne4 Rac1 Rxc1 Rxc1 Rc8 Rd1 Qc6 Qd2 Nxd2 Rxd2 Qc1+",
+        "timestamp": 1793538227021,
+        "oppN": "Lexus199",
+        "oppR": 1930,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "acHpxJtQ",
+        "rating": 1948,
+        "ratingDiff": 5,
+        "result": "win",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 d5 Nf3 c6 e3 g6 c4 Bg7 Nc3 Nf6 cxd5 O-O Be2 cxd5 O-O Bg4 b3 Bxf3 Bxf3 Nbd7 Bb2 e6 Rc1 Rc8 Re1 a6 Qd2 Ne4 Nxe4 dxe4 Bxe4 Nf6 Bf3 Qd7 Rxc8 Rxc8 Rc1 Rxc1+ Qxc1 Nd5 Qc5 Bf8 Qc4 b5 Qc2 Bb4 a4 a5 Bxd5 exd5 h3 Kg7 axb5 Qxb5 e4 dxe4 Qxe4 Be7 d5+ Bf6 Bxf6+ Kxf6 Qc4 Qd7 f3 Ke5 Qe4+ Kd6 Kf2 Kc5 Qc4+ Kd6 Ke3 Qe7+ Kd4 Qe5+ Kd3 Qf5+ Qe4 Qe5 Qxe5+ Kxe5 Kc4 a4 bxa4 f5 a5 Kd6 a6 Kc7 Kc5 Kb8 d6 Kc8 Kc6 Kb8 a7+",
+        "timestamp": 1793538076878,
+        "oppN": "RMPchess06",
+        "oppR": 1916,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "zyRMI0B6",
+        "rating": 1954,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "mate",
+        "color": "white",
+        "moves": "d4 Nf6 Nf3 g6 e3 Bg7 c4 d6 Nc3 Nbd7 Be2 O-O O-O Re8 b3 e5 dxe5 Nxe5 Bb2 a5 Nd5 Nxd5 Bxe5 dxe5 Qxd5 Qxd5 cxd5 b6 Rac1 Bb7 Rfd1 Rac8 e4 c5 dxc6 Rxc6 Bb5 Rxc1 Rxc1 Rd8 Rc7 Bxe4 h3 Bxf3 gxf3 Bf8 Rc6 Bc5 Bc4 Kg7 Kg2 h5 a4 g5 Rc7 Rf8 Kg3 Kg6 Rc6+ f6 h4 gxh4+ Kxh4 Kf5 Kxh5 Rh8#",
+        "timestamp": 1793531617588,
+        "oppN": "stefano420",
+        "oppR": 1965,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "VXLgZWpM",
         "rating": 1960,
@@ -222834,7 +222879,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1793521317505,
+    "lastUpdated": 1793547236598,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -226123,7 +226168,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1793521325556,
+    "lastUpdated": 1793547244659,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -252654,7 +252699,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1793521333608,
+    "lastUpdated": 1793547252731,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -290938,7 +290983,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1793521341687,
+    "lastUpdated": 1793547260791,
     "games": [
       {
         "id": "zWtVNgP0",
