@@ -1,7 +1,37 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1794536134328,
+    "lastUpdated": 1794565051691,
     "games": [
+      {
+        "id": "8lcghHZF",
+        "rating": 1963,
+        "ratingDiff": -6,
+        "result": "loss",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 Bf5 c4 e6 Nc3 c6 cxd5 exd5 Bd3 Ne4 Bxe4 dxe4 Nd2 Bb4 Qb3 Bxc3 bxc3 b6 Ba3 Nd7 O-O c5 dxc5 bxc5 Nc4 O-O Rfd1 Qc7 Rab1 Rab8 Qc2 Rfe8 Nd6 Bg6 Nxe8 Rxe8 Rd2 Nb6 Rbd1 h6 Bb2 c4 Rd4 Qc5 Rd5 Nxd5",
+        "timestamp": 1794564313114,
+        "oppN": "PrinceBadubi",
+        "oppR": 1946,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "yh2tKs0j",
+        "rating": 1968,
+        "ratingDiff": -5,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "black",
+        "moves": "e4 Nc6 d4 d6 c3 e5 dxe5 dxe5 Qxd8+ Nxd8 Nf3 Nf6 Nxe5 Nxe4 f3 Nd6 Bd3 Be6 O-O Be7 Nd2 Nc6 Nxc6 bxc6 Ne4 Kd7 Nc5+ Kd8 Bf4 a5 Rae1 Bxa2 b3 Nb5 Bc4 Bxc5+ Kh1 Nxc3 Rc1 Nb5 Rc2 Bxb3 Bxb3 Kc8 Rxc5 Kb7 Bxf7 a4 Ba2 Rhf8 Bg3 g6 Rb1 Kb6 Rc4 Rad8 Bxc7+ Kxc7 Rcb4 Rd1+ Rxd1 Nd4 Rbxd4 Rd8 Rxd8 Kb6 Bg8 Kc5 Bxh7 a3 Bxg6 a2 Ra1 Kb4 h4 Kb3 h5 c5 Rdd1 Kb2 h6 Kb3 h7 c4 h8=Q c3 Qxc3+ Kxc3 Be4 Kb3 g4 Kb4 g5 Kb3 g6 Kb4 g7 Kc3 g8=Q Kb2 Qb3+ Kxb3 Rd3+",
+        "timestamp": 1794548727952,
+        "oppN": "GrandFast3R",
+        "oppR": 1980,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "WZNdnzEr",
         "rating": 1974,
@@ -224312,7 +224342,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1794536142445,
+    "lastUpdated": 1794565059755,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -227601,7 +227631,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1794536150577,
+    "lastUpdated": 1794565067827,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -254132,7 +254162,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1794536158704,
+    "lastUpdated": 1794565075881,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -292416,7 +292446,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1794536166841,
+    "lastUpdated": 1794565083953,
     "games": [
       {
         "id": "zWtVNgP0",
