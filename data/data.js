@@ -1,7 +1,37 @@
 const data = {
   "Heal_Potion": {
-    "lastUpdated": 1794868661538,
+    "lastUpdated": 1794891094973,
     "games": [
+      {
+        "id": "aKiHTQMD",
+        "rating": 1968,
+        "ratingDiff": -7,
+        "result": "loss",
+        "rated": true,
+        "status": "outoftime",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 Nc6 c4 e6 Nc3 dxc4 Bxc4 Bb4 Bb3 Bxc3+ bxc3 h5 O-O Ng4 h3 f5 hxg4 hxg4 Ne5 Bd7 Nxd7 Qxd7 g3 O-O-O Re1 Rdg8 Ba3 g5 Qd3 Qh7 Bxe6+ Kb8 Kf1 Qh1+ Ke2 Qf3+ Kd2 Rd8 Qxf5 Qg2 Rg1 Qh3 Qxg4 Qh6 Bb3 Ne5 Qe2 g4 Kc2 Nf3 Rh1 Qg7 Rxh8 Qxh8 Bb2 Qh2 Rd1 Qh7+ Kc1 Re8 Bc2 Qg7 c4 Qe7 d5 c6 dxc6 bxc6 Qd3 Qc5 Qd6+ Qxd6 Rxd6 Rc8 c5 Kb7 Bd4 Rc7 Rf6 a5 Rxf3 Ka6 Be4 gxf3 Bxf3 Kb5 Be2+ Kb4 Kb2 a4 Bc3+ Kxc5 Bd4+ Kd5 Bd1 c5 Bxa4 c4",
+        "timestamp": 1794870844520,
+        "oppN": "nudine",
+        "oppR": 1913,
+        "type": "bullet",
+        "clock": "1+0"
+      },
+      {
+        "id": "R37ioakX",
+        "rating": 1962,
+        "ratingDiff": 6,
+        "result": "win",
+        "rated": true,
+        "status": "resign",
+        "color": "white",
+        "moves": "d4 d5 Nf3 Nf6 e3 Bf5 c4 c6 Nc3 e6 cxd5 cxd5 Bd3 Bg6 Bxg6 hxg6 a3 Bd6 O-O Nc6 b4 O-O b5 Ne7 Bb2 a6 bxa6 bxa6 Rc1 Rc8 a4 Qa5 Ba1 Bb4 Ne2 Ne4 Ng3 Rxc1 Qxc1 Nxg3 hxg3 Qxa4 Qc7 Nc8 Ne5 Ne7 g4 Rc8 Qb7 Qb5 Qa7 Nc6 Qd7 Nxe5 Qxc8+ Kh7 dxe5 Qe2 Bd4 a5 Qc6 Qc2 Qxc2",
+        "timestamp": 1794869439530,
+        "oppN": "Maksim_PTZ",
+        "oppR": 1973,
+        "type": "bullet",
+        "clock": "1+0"
+      },
       {
         "id": "1RNWMDfP",
         "rating": 1909,
@@ -224537,7 +224567,7 @@ const data = {
     ]
   },
   "blitz_slayer": {
-    "lastUpdated": 1794868669588,
+    "lastUpdated": 1794891103113,
     "games": [
       {
         "id": "0YIA25Ey",
@@ -227826,7 +227856,7 @@ const data = {
     ]
   },
   "power_factor": {
-    "lastUpdated": 1794868677632,
+    "lastUpdated": 1794891111242,
     "games": [
       {
         "id": "vVvIWs3m",
@@ -254357,7 +254387,7 @@ const data = {
     ]
   },
   "satrit": {
-    "lastUpdated": 1794868685692,
+    "lastUpdated": 1794891119363,
     "games": [
       {
         "id": "tMK9TnsT",
@@ -292641,7 +292671,7 @@ const data = {
     ]
   },
   "penguin_d4c4": {
-    "lastUpdated": 1794868693792,
+    "lastUpdated": 1794891127523,
     "games": [
       {
         "id": "zWtVNgP0",
