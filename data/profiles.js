@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1795247620060,
+    "lastUpdated": 1795275938005,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -15,7 +15,7 @@ const profiles = {
         "bullet": {
           "games": 8154,
           "rating": 1979,
-          "rd": 45,
+          "rd": 46,
           "prog": 12
         },
         "blitz": {
@@ -33,7 +33,7 @@ const profiles = {
         "classical": {
           "games": 337,
           "rating": 1785,
-          "rd": 119,
+          "rd": 120,
           "prog": -74,
           "prov": true
         },
@@ -61,7 +61,7 @@ const profiles = {
         "threeCheck": {
           "games": 9,
           "rating": 1825,
-          "rd": 244,
+          "rd": 245,
           "prog": 0,
           "prov": true
         },
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1795247620164,
+    "lastUpdated": 1795275938147,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -164,7 +164,7 @@ const profiles = {
         "blitz": {
           "games": 67,
           "rating": 1917,
-          "rd": 195,
+          "rd": 196,
           "prog": -82,
           "prov": true
         },
@@ -192,7 +192,7 @@ const profiles = {
         "puzzle": {
           "games": 5,
           "rating": 1987,
-          "rd": 260,
+          "rd": 261,
           "prog": 0,
           "prov": true
         }
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1795247620266,
+    "lastUpdated": 1795275938293,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -240,7 +240,7 @@ const profiles = {
         "blitz": {
           "games": 193,
           "rating": 1944,
-          "rd": 221,
+          "rd": 222,
           "prog": -25,
           "prov": true
         },
@@ -275,7 +275,7 @@ const profiles = {
         "threeCheck": {
           "games": 10,
           "rating": 1185,
-          "rd": 282,
+          "rd": 283,
           "prog": 0,
           "prov": true
         },
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1795247620388,
+    "lastUpdated": 1795275938449,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1795247620491,
+    "lastUpdated": 1795275938597,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
