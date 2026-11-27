@@ -1,6 +1,6 @@
 const profiles = {
   "Heal_Potion": {
-    "lastUpdated": 1795770938486,
+    "lastUpdated": 1795806914180,
     "profile": {
       "id": "heal_potion",
       "username": "Heal_Potion",
@@ -129,17 +129,17 @@ const profiles = {
         "realName": "Amrit Raj Thakur",
         "links": "https://amrit-raj-17.github.io/Lichess/\r\nwww.google.com"
       },
-      "seenAt": 1795625337550,
+      "seenAt": 1795785230443,
       "playTime": {
-        "total": 3520043,
+        "total": 3520668,
         "tv": 1595
       },
       "url": "https://lichess.org/@/Heal_Potion",
       "count": {
-        "all": 15195,
+        "all": 15196,
         "rated": 12270,
         "draw": 625,
-        "loss": 5880,
+        "loss": 5881,
         "win": 8690,
         "bookmark": 26,
         "playing": 0,
@@ -149,7 +149,7 @@ const profiles = {
     }
   },
   "blitz_slayer": {
-    "lastUpdated": 1795770938595,
+    "lastUpdated": 1795806914309,
     "profile": {
       "id": "blitz_slayer",
       "username": "blitz_slayer",
@@ -218,7 +218,7 @@ const profiles = {
     }
   },
   "power_factor": {
-    "lastUpdated": 1795770938707,
+    "lastUpdated": 1795806914443,
     "profile": {
       "id": "power_factor",
       "username": "power_factor",
@@ -247,7 +247,7 @@ const profiles = {
         "rapid": {
           "games": 52,
           "rating": 1946,
-          "rd": 230,
+          "rd": 231,
           "prog": 84,
           "prov": true
         },
@@ -347,7 +347,7 @@ const profiles = {
     }
   },
   "satrit": {
-    "lastUpdated": 1795770938839,
+    "lastUpdated": 1795806914647,
     "profile": {
       "id": "satrit",
       "username": "satrit",
@@ -456,7 +456,7 @@ const profiles = {
     }
   },
   "penguin_d4c4": {
-    "lastUpdated": 1795770938946,
+    "lastUpdated": 1795806914766,
     "profile": {
       "id": "penguin_d4c4",
       "username": "penguin_d4c4",
@@ -471,7 +471,7 @@ const profiles = {
         "bullet": {
           "games": 524,
           "rating": 1600,
-          "rd": 306,
+          "rd": 307,
           "prog": -47,
           "prov": true
         },
